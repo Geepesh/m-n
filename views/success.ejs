@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        i{
+            color : white;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left : 25%;
+            right: 25%;
+            
+        }
+        div{
+            width : 30%;
+            border-radius: 50%;
+            background-color : green;
+            position: relative;
+            margin: auto;
+            margin-top: 40px;
+        }
+        @media screen and (min-width : 180px) and (max-width : 750px){
+            div{
+            width : 45%;
+            background-color : green;
+            position: relative;
+            margin: auto;
+            margin-top: 40px;
+        }
+        }
+        @media screen and (min-width : 750px) and (max-width : 1000){
+            div{
+            width : 35%;
+            background-color : green;
+            position: relative;
+            margin: auto;
+            margin-top: 40px;
+        }
+    }
+    p{
+        font-weight: bolder;
+        text-align: center;
+    }
+    </style>
+</head>
+<body onresize="reload()">
+    <div id="div">
+        <center><i id="i" class="fa-solid fa-check"></i></center>
+    </div>
+    <p id="placed">Your Order has been Placed Successfully</p>
+    <p id="thank">Thanks for connecting with us</p>
+    <script>
+        console.log(document.getElementById('div').offsetWidth)
+        document.getElementById('div').style.height = `${document.getElementById('div').offsetWidth}px`
+        document.getElementById('i').style.fontSize = `${document.getElementById('div').offsetWidth/1.5}px`
+        document.getElementById('placed').style.fontSize = `${document.getElementById('div').offsetWidth/9}px`
+        document.getElementById('thank').style.fontSize = `${document.getElementById('div').offsetWidth/11}px`
+        let reload = ()=>{
+        console.log(document.getElementById('div').offsetWidth)
+        document.getElementById('div').style.height = `${document.getElementById('div').offsetWidth}px`
+        document.getElementById('i').style.fontSize = `${document.getElementById('div').offsetWidth/1.5}px`
+        document.getElementById('placed').style.fontSize = `${document.getElementById('div').offsetWidth/9}px`
+        document.getElementById('thank').style.fontSize = `${document.getElementById('div').offsetWidth/11}px`
+        }
+    </script>
+</body>
+</html>

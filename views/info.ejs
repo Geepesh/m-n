@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 39, 74);
+        }
+        #container{
+            background-color: white;
+            margin: auto;
+            border-radius: 15px;
+            width : 90%;
+            padding: 10px;
+            
+        }
+        #banner{
+            
+            color : white;
+            
+           
+        }
+        #banner>b{
+            font-size: 30px;  
+        }
+        @media screen and (min-width : 500px) {
+            #banner>b{
+            font-size: 38px;  
+        }
+        }
+        
+        @media screen and (min-width : 800px) and (max-width : 1000px) {
+            #banner>b{
+            font-size: 50px;  
+            }
+            #container{
+                width : 80%;
+            }
+        }
+        @media screen and (min-width : 1000px){
+            #banner>b{
+            font-size: 70px;  
+        }
+        #container{
+                width : 75%;
+            }
+        }
+        button{
+            border: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <center>
+    <div id="banner">
+        
+        <b>Narmada Pustak Bhadar</b>
+        
+    </div>
+    </center>
+    
+    <div id="container">
+        <form action="/" method="post">
+            <div class="form-group">
+              
+              <input name="name" style="height: 45px;background-color: rgb(221, 216, 216);width:95%;margin: auto;margin-top:15px;margin-bottom:15px;" type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input name="phone"  style="height: 45px;background-color: rgb(221, 216, 216);width:95%;margin: auto;margin-top:15px;margin-bottom:15px;" type="number" class="form-control" id="phone" placeholder="Contact Number">
+            </div>
+            <div class="form-group">
+              
+                <input name="city" style="height: 45px;background-color: rgb(221, 216, 216);width:95%;margin: auto;margin-top:15px;margin-bottom:15px;" type="text" class="form-control" id="city" placeholder="City">
+              </div>
+            <center>
+            <button style="background-color: rgb(23, 171, 197);width:95%;margin: auto;margin-top:10px;margin-bottom:10px;font-weight: bold;font-size: larger;" type="submit" class="btn btn-primary">Submit</button>
+        </center>
+          </form>
+        </div>
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size : 20px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 20px;
+        }
+        #pa,#pb{
+            display : none;
+        }
+        body{
+            display : flex;
+            width : 100%;
+            justify-content : center; 
+        }
+        .info{
+            width : 330px;
+            height : 35px;
+            font-size: large;
+            display: block;
+            margin : 20px;
+            padding: 10px;
+        }
+        input[type=number]{
+            width : 200px;
+            height : 35px;
+            margin : 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <form action="/order_form" method="post">
+        <div>
+            <input class="info" type="text" name="name" id="" placeholder="Name">
+            <input class="info" type="text" name="phone" placeholder="Contact Number">
+            <input class="info" type="text" name="city" id="" placeholder="City">
+        </div>
+        <b><h2 style="margin : auto;" id="pa_" onclick="pa()">Pariksha Adhyan</h2></b>
+        <div><div id="pa">
+            <div>
+            <div style="margin : 10px;">9th :
+                <div>English
+                    <input value="0" type="number" name="pa_9_eng" id="">
+                </div>
+                <div>Hindi
+                    <input value="0" type="number" name="pa_9_hin" id="">
+                </div>
+                <div>Sanskrit
+                    <input value="0" type="number" name="pa_9_skt" id="">
+                </div>
+                <div>Mathematics
+                    <input value="0" type="number" name="pa_9_maths" id="">
+                </div>
+                <div>Science
+                    <input value="0" type="number" name="pa_9_sc" id="">
+                </div>
+                <div>Social Studies
+                    <input value="0" type="number" name="pa_9_sst" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">10th :
+                <div>English
+                    <input value="0" type="number" name="pa_10_eng" id="">
+                </div>
+                <div>Hindi
+                    <input value="0" type="number" name="pa_10_hin" id="">
+                </div>
+                <div>Sanskrit
+                    <input value="0" type="number" name="pa_10_skt" id="">
+                </div>
+                <div>Mathematics
+                    <input value="0" type="number" name="pa_10_maths" id="">
+                </div>
+                <div>Science
+                    <input value="0" type="number" name="pa_10_sc" id="">
+                </div>
+                <div>Social Studies
+                    <input value="0" type="number" name="pa_10_sst" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">11th :
+                <div>English
+                    <input value="0" type="number" name="pa_11_eng" id="">
+                </div>
+                <div>Hindi
+                    <input value="0" type="number" name="pa_11_hin" id="">
+                </div>
+                <div>Physics
+                    <input value="0" type="number" name="pa_11_phy" id="">
+                </div>
+                <div>Chemistry
+                    <input value="0" type="number" name="pa_11_chem" id="">
+                </div>
+                <div>Biology
+                    <input value="0" type="number" name="pa_11_bio" id="">
+                </div>
+                <div>Economics
+                    <input value="0" type="number" name="pa_11_eco" id="">
+                </div>
+                <div>History
+                    <input value="0" type="number" name="pa_11_his" id="">
+                </div>
+                <div>Sociology
+                    <input value="0" type="number" name="pa_11_socio" id="">
+                </div>
+                <div>Geography
+                    <input value="0" type="number" name="pa_11_geo" id="">
+                </div>
+                <div>Political Science
+                    <input value="0" type="number" name="pa_11_ps" id="">
+                </div>
+                <div>Mathematics
+                    <input value="0" type="number" name="pa_11_maths" id="">
+                </div>
+                <div>Krashi Ganit
+                    <input value="0" type="number" name="pa_11_krashi" id="">
+                </div>
+                <div>Pashu Palan
+                    <input value="0" type="number" name="pa_11_pashu" id="">
+                </div>
+                <div>Fasal Utpadan
+                    <input value="0" type="number" name="pa_11_fasal" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">12th :
+                <div>English
+                    <input value="0" type="number" name="pa_12_eng" id="">
+                </div>
+                <div>Hindi
+                    <input value="0" type="number" name="pa_12_hin" id="">
+                </div>
+                <div>Physics
+                    <input value="0" type="number" name="pa_12_phy" id="">
+                </div>
+                <div>Chemistry
+                    <input value="0" type="number" name="pa_12_chem" id="">
+                </div>
+                <div>Biology
+                    <input value="0" type="number" name="pa_12_bio" id="">
+                </div>
+                <div>Economics
+                    <input value="0" type="number" name="pa_12_eco" id="">
+                </div>
+                <div>History
+                    <input value="0" type="number" name="pa_12_his" id="">
+                </div>
+                <div>Sociology
+                    <input value="0" type="number" name="pa_12_socio" id="">
+                </div>
+                <div>Geography
+                    <input value="0" type="number" name="pa_12_geo" id="">
+                </div>
+                <div>Political Science
+                    <input value="0" type="number" name="pa_12_ps" id="">
+                </div>
+                <div>Mathematics
+                    <input value="0" type="number" name="pa_12_maths" id="">
+                </div>
+                <div>Krashi Ganit
+                    <input value="0" type="number" name="pa_12_krashi" id="">
+                </div>
+                <div>Pashu Palan
+                    <input value="0" type="number" name="pa_12_pashu" id="">
+                </div>
+                <div>Fasal Utpadan
+                    <input value="0" type="number" name="pa_12_fasal" id="">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>
+            <h2 style="margin : auto;" onclick="pb()">Pariksha Bodth</h2>
+            <div id="pb">
+            <div style="margin : 10px;">9th :
+                <div>english
+                    <input value="0" type="number" name="pb_9_eng" id="">
+                </div>
+                <div>hindi
+                    <input value="0" type="number" name="pb_9_hin" id="">
+                </div>
+                <div>sanskrit
+                    <input value="0" type="number" name="pb_9_skt" id="">
+                </div>
+                <div>maths
+                    <input value="0" type="number" name="pb_9_maths" id="">
+                </div>
+                <div>science
+                    <input value="0" type="number" name="pb_9_sc" id="">
+                </div>
+                <div>sst
+                    <input value="0" type="number" name="pb_9_sst" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">10th :
+                <div>english
+                    <input value="0" type="number" name="pb_10_eng" id="">
+                </div>
+                <div>hindi
+                    <input value="0" type="number" name="pb_10_hin" id="">
+                </div>
+                <div>sanskrit
+                    <input value="0" type="number" name="pb_10_skt" id="">
+                </div>
+                <div>maths
+                    <input value="0" type="number" name="pb_10_maths" id="">
+                </div>
+                <div>science
+                    <input value="0" type="number" name="pb_10_sc" id="">
+                </div>
+                <div>sst
+                    <input value="0" type="number" name="pb_10_sst" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">11th :
+                <div>english
+                    <input value="0" type="number" name="pb_11_eng" id="">
+                </div>
+                <div>hindi
+                    <input value="0" type="number" name="pb_11_hin" id="">
+                </div>
+                <div>physics
+                    <input value="0" type="number" name="pb_11_phy" id="">
+                </div>
+                <div>chemistry
+                    <input value="0" type="number" name="pb_11_chem" id="">
+                </div>
+                <div>biology
+                    <input value="0" type="number" name="pb_11_bio" id="">
+                </div>
+                <div>economics
+                    <input value="0" type="number" name="pb_11_eco" id="">
+                </div>
+                <div>history
+                    <input value="0" type="number" name="pb_11_his" id="">
+                </div>
+                <div>sociology
+                    <input value="0" type="number" name="pb_11_socio" id="">
+                </div>
+                <div>geography
+                    <input value="0" type="number" name="pb_11_geo" id="">
+                </div>
+                <div>political science
+                    <input value="0" type="number" name="pb_11_ps" id="">
+                </div>
+                <div>maths
+                    <input value="0" type="number" name="pb_11_maths" id="">
+                </div>
+                <div>krashi Ganit
+                    <input value="0" type="number" name="pb_11_krashi" id="">
+                </div>
+                <div>pbshu pblan
+                    <input value="0" type="number" name="pb_11_pbshu" id="">
+                </div>
+                <div>Fasal Utpbdan
+                    <input value="0" type="number" name="pb_11_fasal" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">12th :
+                <div>english
+                    <input value="0" type="number" name="pb_12_eng" id="">
+                </div>
+                <div>hindi
+                    <input value="0" type="number" name="pb_12_hin" id="">
+                </div>
+                <div>physics
+                    <input value="0" type="number" name="pb_12_phy" id="">
+                </div>
+                <div>chemistry
+                    <input value="0" type="number" name="pb_12_chem" id="">
+                </div>
+                <div>biology
+                    <input value="0" type="number" name="pb_12_bio" id="">
+                </div>
+                <div>economics
+                    <input value="0" type="number" name="pb_12_eco" id="">
+                </div>
+                <div>history
+                    <input value="0" type="number" name="pb_12_his" id="">
+                </div>
+                <div>sociology
+                    <input value="0" type="number" name="pb_12_socio" id="">
+                </div>
+                <div>geography
+                    <input value="0" type="number" name="pb_12_geo" id="">
+                </div>
+                <div>political science
+                    <input value="0" type="number" name="pb_12_ps" id="">
+                </div>
+                <div>maths
+                    <input value="0" type="number" name="pb_12_maths" id="">
+                </div>
+                <div>krashi Ganit
+                    <input value="0" type="number" name="pb_12_krashi" id="">
+                </div>
+                <div>pbshu pblan
+                    <input value="0" type="number" name="pb_12_pbshu" id="">
+                </div>
+                <div>Fasal Utpbdan
+                    <input value="0" type="number" name="pb_12_fasal" id="">
+                </div>
+            </div>
+        </div>
+        </div>
+        <input type="submit" value=">">
+    </div>
+    </form>
+    <script>
+        function pa() {
+  var x = document.getElementById("pa");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function pb() {
+  var x = document.getElementById("pb");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+
+        
+            
+        
+    </script>
+</body>
+
+</html>
+-->

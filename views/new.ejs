@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 39, 74);
+        }
+        #pa,#pb,#dig,#mn_project,#shivlal_project,#shivlal_guide,#keshav_guide,#navbodh_practicle{
+          display: none;
+        }
+        #container{
+            background-color: white;
+            margin: auto;
+            border-radius: 15px;
+            width : 90%;
+            padding: 10px;
+            
+        }
+        #banner{
+            
+            color : white;
+            
+           
+        }
+        #banner>b{
+            font-size: 30px;  
+        }
+        @media screen and (min-width : 500px) {
+            #banner>b{
+            font-size: 38px;  
+        }
+        }
+        .div{
+            display: block;
+            margin : 20px;
+        }
+        @media screen and (min-width : 800px) and (max-width : 1000px) {
+            #banner>b{
+            font-size: 50px;  
+            }
+            #container{
+                width : 80%;
+            }
+        }
+        @media screen and (min-width : 1000px){
+            #banner>b{
+            font-size: 70px;  
+        }
+        #container{
+                width : 75%;
+            }
+        }
+        button{
+            border: none;
+        }
+        span{
+            margin: 20px;
+            font-size: 22px;
+        }
+        .item{
+            margin: 20px;
+            font-size: 28px;
+            display: block;
+            font-weight: bolder;
+            text-align: center;
+            background-color: rgb(202, 200, 200);
+            color : rgb(58, 55, 55);
+            border-radius: 10px;
+        }
+        @media screen and (max-width : 550px) {
+            span{
+                font-size : 18px;
+                margin : 10px;
+            }
+            .input{
+                width : 30%;
+                margin-right : 0px;
+                float : right;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <center>
+    <div id="banner">
+        
+        <b>Narmada Pustak Bhadar</b>
+        
+    </div>
+    </center>
+    
+    <div id="container">
+        <form action="/order_placed" method="post">
+            <span class="item" onclick="pa()">Pariksha Adhyan</span>
+            <div id="pa">
+            <div class="form-group div">
+            <span>9th English ></span><br><input name="pa_9_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            <div class="form-group div">
+                <span>9th Hindi ></span><br><input name="pa_9_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Mathematics ></span><br><input name="pa_9_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Social Studies ></span><input name="pa_9_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Science ></span><input name="pa_9_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Sanskrit ></span><input name="pa_9_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+            
+            <!-- 10th -->
+            <div class="form-group div">
+                <span>10th English ></span><input name="pa_10_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                  <span>10th Hindi ></span><input name="pa_10_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Mathematics ></span><input name="pa_10_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Social Studies ></span><input name="pa_10_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Science ></span><input name="pa_10_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Sanskrit ></span><input name="pa_10_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+
+                <!--11th-->
+
+                <div class="form-group div">
+                    <span>11th English ></span><input name="pa_11_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                  </div><br>
+                  <div class="form-group div">
+                      <span>11th Hindi ></span><input name="pa_11_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Mathematics ></span><input name="pa_11_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Physics ></span><input name="pa_11_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Chemistry ></span><input name="pa_11_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Biology ></span><input name="pa_11_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                        <span>11th History ></span><input name="pa_11_his" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                      </div><br>
+                      <div class="form-group div">
+                          <span>11th Political Science ></span><input name="pa_11_ps" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Geography ></span><input name="pa_11_geo" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Economics ></span><input name="pa_11_eco" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Sociology ></span><input name="pa_11_socio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Fasal Utpadan ></span><input name="pa_11_fasal" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                            <span>11th Krashi Ganit ></span><input name="pa_11_krashi" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                          </div><br>
+                          <div class="form-group div">
+                            <span>11th Pashu Palan ></span><input name="pa_11_pashu" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                          </div><br>
+
+                          <!--12th-->
+
+<div class="form-group div">
+    <span>12th English ></span><input name="pa_12_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+  </div><br>
+  <div class="form-group div">
+      <span>12th Hindi ></span><input name="pa_12_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Mathematics ></span><input name="pa_12_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Physics ></span><input name="pa_12_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Chemistry ></span><input name="pa_12_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Biology ></span><input name="pa_12_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+        <span>12th History ></span><input name="pa_12_his" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+      </div><br>
+      <div class="form-group div">
+          <span>12th Political Science ></span><input name="pa_12_ps" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Geography ></span><input name="pa_12_geo" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Economics ></span><input name="pa_12_eco" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Sociology ></span><input name="pa_12_socio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Fasal Utpadan ></span><input name="pa_12_fasal" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+            <span>12th Krashi Ganit ></span><input name="pa_12_krashi" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+          <div class="form-group div">
+            <span>12th Pashu Palan ></span><input name="pa_12_pashu" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+        </div>
+        
+
+        <span class="item" onclick="pb()">Pariksha Bodth</span>
+        <div id="pb">
+            <div class="form-group div">
+            <span>9th English ></span><br><input name="pb_9_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            <div class="form-group div">
+                <span>9th Hindi ></span><br><input name="pb_9_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Mathematics ></span><br><input name="pb_9_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Social Studies ></span><input name="pb_9_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Science ></span><input name="pb_9_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Sanskrit ></span><input name="pb_9_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+            
+            <!-- 10th -->
+            <div class="form-group div">
+                <span>10th English ></span><input name="pb_10_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                  <span>10th Hindi ></span><input name="pb_10_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Mathematics ></span><input name="pb_10_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Social Studies ></span><input name="pb_10_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Science ></span><input name="pb_10_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Sanskrit ></span><input name="pb_10_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+
+                <!--11th-->
+
+                <div class="form-group div">
+                    <span>11th English ></span><input name="pb_11_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                  </div><br>
+                  <div class="form-group div">
+                      <span>11th Hindi ></span><input name="pb_11_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Mathematics ></span><input name="pb_11_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Physics ></span><input name="pb_11_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Chemistry ></span><input name="pb_11_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Biology ></span><input name="pb_11_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                        <span>11th History ></span><input name="pb_11_his" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                      </div><br>
+                      <div class="form-group div">
+                          <span>11th Political Science ></span><input name="pb_11_ps" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Geography ></span><input name="pb_11_geo" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Economics ></span><input name="pb_11_eco" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Sociology ></span><input name="pb_11_socio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Fasal Utpadan ></span><input name="pb_11_fasal" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                            <span>11th Krashi Ganit ></span><input name="pb_11_krashi" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                          </div><br>
+                          <div class="form-group div">
+                            <span>11th Pashu Palan ></span><input name="pb_11_pashu" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                          </div><br>
+
+                          <!--12th-->
+
+<div class="form-group div">
+    <span>12th English ></span><input name="pb_12_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+  </div><br>
+  <div class="form-group div">
+      <span>12th Hindi ></span><input name="pb_12_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Mathematics ></span><input name="pb_12_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Physics ></span><input name="pb_12_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Chemistry ></span><input name="pb_12_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Biology ></span><input name="pb_12_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+        <span>12th History ></span><input name="pb_12_his" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+      </div><br>
+      <div class="form-group div">
+          <span>12th Political Science ></span><input name="pb_12_ps" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Geography ></span><input name="pb_12_geo" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Economics ></span><input name="pb_12_eco" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Sociology ></span><input name="pb_12_socio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Fasal Utpadan ></span><input name="pb_12_fasal" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+            <span>12th Krashi Ganit ></span><input name="pb_12_krashi" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+          <div class="form-group div">
+            <span>12th Pashu Palan ></span><input name="pb_12_pashu" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+        </div>
+
+
+        <span class="item" onclick="mn_project()">MN Project</span>
+        <div id="mn_project">
+            <div class="form-group div">
+            <span>9th English ></span><br><input name="mn_project_9_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            <div class="form-group div">
+                <span>9th Hindi ></span><br><input name="mn_project_9_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Mathematics ></span><br><input name="mn_project_9_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Social Studies ></span><input name="mn_project_9_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Science ></span><input name="mn_project_9_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Sanskrit ></span><input name="mn_project_9_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+            
+            <!-- 10th -->
+            <div class="form-group div">
+                <span>10th English ></span><input name="mn_project_10_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                  <span>10th Hindi ></span><input name="mn_project_10_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Mathematics ></span><input name="mn_project_10_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Social Studies ></span><input name="mn_project_10_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Science ></span><input name="mn_project_10_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Sanskrit ></span><input name="mn_project_10_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+
+
+        </div>
+
+
+
+        <span class="item" onclick="shivlal_project()">Shivlal Project</span>
+        <div id="shivlal_project">
+            <div class="form-group div">
+            <span>9th English ></span><br><input name="shivlal_project_9_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            <div class="form-group div">
+                <span>9th Hindi ></span><br><input name="shivlal_project_9_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Mathematics ></span><br><input name="shivlal_project_9_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Social Studies ></span><input name="shivlal_project_9_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Science ></span><input name="shivlal_project_9_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Sanskrit ></span><input name="shivlal_project_9_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+
+
+            
+            <!-- 10th -->
+            <div class="form-group div">
+                <span>10th English ></span><input name="shivlal_project_10_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                  <span>10th Hindi ></span><input name="shivlal_project_10_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Mathematics ></span><input name="shivlal_project_10_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Social Studies ></span><input name="shivlal_project_10_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Science ></span><input name="shivlal_project_10_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Sanskrit ></span><input name="shivlal_project_10_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+
+                <!--11th-->
+
+                <div class="form-group div">
+                    <span>11th English ></span><input name="shivlal_project_11_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                  </div><br>
+                  <div class="form-group div">
+                      <span>11th Hindi ></span><input name="shivlal_project_11_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Mathematics ></span><input name="shivlal_project_11_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Physics ></span><input name="shivlal_project_11_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Chemistry ></span><input name="shivlal_project_11_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Biology ></span><input name="shivlal_project_11_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                        <span>11th History ></span><input name="shivlal_project_11_his" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                      </div><br>
+                      <div class="form-group div">
+                          <span>11th Political Science ></span><input name="shivlal_project_11_ps" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Geography ></span><input name="shivlal_project_11_geo" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Economics ></span><input name="shivlal_project_11_eco" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Sociology ></span><input name="shivlal_project_11_socio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Fasal Utpadan ></span><input name="shivlal_project_11_fasal" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                            <span>11th Krashi Ganit ></span><input name="shivlal_project_11_krashi" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                          </div><br>
+                          <div class="form-group div">
+                            <span>11th Pashu Palan ></span><input name="shivlal_project_11_pashu" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                          </div><br>
+
+                          <!--12th-->
+
+<div class="form-group div">
+    <span>12th English ></span><input name="shivlal_project_12_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+  </div><br>
+  <div class="form-group div">
+      <span>12th Hindi ></span><input name="shivlal_project_12_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Mathematics ></span><input name="shivlal_project_12_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Physics ></span><input name="shivlal_project_12_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Chemistry ></span><input name="shivlal_project_12_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Biology ></span><input name="shivlal_project_12_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+        <span>12th History ></span><input name="shivlal_project_12_his" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+      </div><br>
+      <div class="form-group div">
+          <span>12th Political Science ></span><input name="shivlal_project_12_ps" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Geography ></span><input name="shivlal_project_12_geo" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Economics ></span><input name="shivlal_project_12_eco" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Sociology ></span><input name="shivlal_project_12_socio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Fasal Utpadan ></span><input name="shivlal_project_12_fasal" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+            <span>12th Krashi Ganit ></span><input name="shivlal_project_12_krashi" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+          <div class="form-group div">
+            <span>12th Pashu Palan ></span><input name="shivlal_project_12_pashu" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+        </div>
+
+        
+
+
+
+        <span class="item" onclick="dig()">Shivlal Digdershika</span>
+        <div id="dig">
+            <div class="form-group div">
+            <span>9th English ></span><br><input name="dig_9_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            <div class="form-group div">
+                <span>9th Hindi ></span><br><input name="dig_9_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Mathematics ></span><br><input name="dig_9_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Social Studies ></span><input name="dig_9_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Science ></span><input name="dig_9_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>9th Sanskrit ></span><input name="dig_9_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+            
+            <!-- 10th -->
+            <div class="form-group div">
+                <span>10th English ></span><input name="dig_10_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                  <span>10th Hindi ></span><input name="dig_10_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Mathematics ></span><input name="dig_10_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Social Studies ></span><input name="dig_10_sst" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Science ></span><input name="dig_10_sc" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                <div class="form-group div">
+                  <span>10th Sanskrit ></span><input name="dig_10_skt" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+
+                <!--11th-->
+
+                <div class="form-group div">
+                    <span>11th English ></span><input name="dig_11_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                  </div><br>
+                  <div class="form-group div">
+                      <span>11th Hindi ></span><input name="dig_11_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Mathematics ></span><input name="dig_11_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Physics ></span><input name="dig_11_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Chemistry ></span><input name="dig_11_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                      <span>11th Biology ></span><input name="dig_11_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                    </div><br>
+                    <div class="form-group div">
+                        <span>11th History ></span><input name="dig_11_his" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                      </div><br>
+                      <div class="form-group div">
+                          <span>11th Political Science ></span><input name="dig_11_ps" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Geography ></span><input name="dig_11_geo" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Economics ></span><input name="dig_11_eco" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Sociology ></span><input name="dig_11_socio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                          <span>11th Fasal Utpadan ></span><input name="dig_11_fasal" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                        </div><br>
+                        <div class="form-group div">
+                            <span>11th Krashi Ganit ></span><input name="dig_11_krashi" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                          </div><br>
+                          <div class="form-group div">
+                            <span>11th Pashu Palan ></span><input name="dig_11_pashu" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                          </div><br>
+
+                          <!--12th-->
+
+<div class="form-group div">
+    <span>12th English ></span><input name="dig_12_eng" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+  </div><br>
+  <div class="form-group div">
+      <span>12th Hindi ></span><input name="dig_12_hin" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Mathematics ></span><input name="dig_12_maths" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Physics ></span><input name="dig_12_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Chemistry ></span><input name="dig_12_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+      <span>12th Biology ></span><input name="dig_12_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+    </div><br>
+    <div class="form-group div">
+        <span>12th History ></span><input name="dig_12_his" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+      </div><br>
+      <div class="form-group div">
+          <span>12th Political Science ></span><input name="dig_12_ps" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Geography ></span><input name="dig_12_geo" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Economics ></span><input name="dig_12_eco" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Sociology ></span><input name="dig_12_socio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+          <span>12th Fasal Utpadan ></span><input name="dig_12_fasal" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+        </div><br>
+        <div class="form-group div">
+            <span>12th Krashi Ganit ></span><input name="dig_12_krashi" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+          <div class="form-group div">
+            <span>12th Pashu Palan ></span><input name="dig_12_pashu" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+        </div>
+        <span class="item" onclick="shivlal_guide()">Shivlal Guide</span>
+        <div id="shivlal_guide">
+            <div class="form-group div">
+            <span>3rd ></span><br><input name="shivlal_guide_3" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            <div class="form-group div">
+                <span>4th ></span><br><input name="shivlal_guide_4" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>5th ></span><br><input name="shivlal_guide_5" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>6th ></span><input name="shivlal_guide_6" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>7th ></span><input name="shivlal_guide_7" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>8th ></span><input name="shivlal_guide_8" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+            <div class="form-group div">
+                <span>9th ></span><input name="shivlal_guide_9" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                  <span>10th ></span><input name="shivlal_guide_10" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                
+        </div>
+        <span class="item" onclick="keshav_guide()">Keshav Guide</span>
+        <div id="keshav_guide">
+            <div class="form-group div">
+            <span>3rd ></span><br><input name="keshav_guide_3" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            <div class="form-group div">
+                <span>4th ></span><br><input name="keshav_guide_4" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>5th ></span><br><input name="keshav_guide_5" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>6th ></span><input name="keshav_guide_6" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>7th ></span><input name="keshav_guide_7" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                <span>8th ></span><input name="keshav_guide_8" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+            <div class="form-group div">
+                <span>9th ></span><input name="keshav_guide_9" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+              </div><br>
+              <div class="form-group div">
+                  <span>10th ></span><input name="keshav_guide_10" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+                </div><br>
+                
+        </div>
+        <span class="item" onclick="navbodh_practicle()">Navbodh Practicle</span>
+<div id="navbodh_practicle">
+    <div class="form-group div">
+    
+      <div class="form-group div">
+        <span>9th Science ></span><input name="navbodh_practicle_9" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+      </div><br>
+      
+    
+    <!-- 10th -->
+    <div class="form-group div">
+        <span>10th Science ></span><input name="navbodh_practicle_10" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+      </div><br>
+      
+
+        <!--11th-->
+
+        <div class="form-group div">
+            <span>11th Biology ></span><input name="navbodh_practicle_11_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+          </div><br>
+          <div class="form-group div">
+              <span>11th Physics ></span><input name="navbodh_practicle_11_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            <div class="form-group div">
+              <span>11th Chemistry ></span><input name="navbodh_practicle_11_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+            </div><br>
+            
+                  
+                  
+
+<div class="form-group div">
+<span>12th Biology ></span><input name="navbodh_practicle_12_bio" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+</div><br>
+<div class="form-group div">
+<span>12th Physics ></span><input name="navbodh_practicle_12_phy" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+</div><br>
+<div class="form-group div">
+<span>12th Chemistry ></span><input name="navbodh_practicle_12_chem" style="height: 45px;background-color: rgb(221, 216, 216);width:50%;float:right;margin-right :20px;margin-top: 15px;margin-bottom:15px;" type="number" min="0" class="form-control input" placeholder="Enter Quantity">
+</div><br>
+
+</div>
+<input type="hidden" name="name" value="<%=name%>">
+<input type="hidden" name="city" value="<%=city%>">
+<input type="hidden" name="phone" value="<%=phone%>">
+</div>
+            <center>
+            <button style="background-color: rgb(23, 171, 197);width:95%;margin: auto;margin-top:10px;margin-bottom:10px;font-weight: bold;font-size: larger;" type="submit" class="btn btn-primary">Submit</button>
+        </center>
+          </form>
+        </div>
+        <script>
+            
+    
+    function pa() {
+      var x = document.getElementById(`pa`);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function shivlal_project() {
+      var x = document.getElementById(`shivlal_project`);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function pb() {
+      var x = document.getElementById(`pb`);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function dig() {
+      var x = document.getElementById(`dig`);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function shivlal_guide() {
+      var x = document.getElementById(`shivlal_guide`);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function keshav_guide() {
+      var x = document.getElementById(`keshav_guide`);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function mn_project() {
+      var x = document.getElementById(`mn_project`);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function navbodh_practicle() {
+      var x = document.getElementById(`navbodh_practicle`);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    
+    
+    
+    
+            
+                
+            
+        </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size : 20px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 20px;
+        }
+        #pa,#pb{
+            display : none;
+        }
+        body{
+            display : flex;
+            width : 100%;
+            justify-content : center; 
+        }
+        .info{
+            width : 330px;
+            height : 35px;
+            font-size: large;
+            display: block;
+            margin : 20px;
+            padding: 10px;
+        }
+        input[type=number]{
+            width : 200px;
+            height : 35px;
+            margin : 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <form action="/order_form" method="post">
+        <div>
+            <input class="info" type="text" name="name" id="" placeholder="Name">
+            <input class="info" type="text" name="phone" placeholder="Contact Number">
+            <input class="info" type="text" name="city" id="" placeholder="City">
+        </div>
+        <b><h2 style="margin : auto;" id="pa_" onclick="pa()">Pariksha Adhyan</h2></b>
+        <div><div id="pa">
+            <div>
+            <div style="margin : 10px;">9th :
+                <div>English
+                    <input value="0" type="number" name="pa_9_eng" id="">
+                </div>
+                <div>Hindi
+                    <input value="0" type="number" name="pa_9_hin" id="">
+                </div>
+                <div>Sanskrit
+                    <input value="0" type="number" name="pa_9_skt" id="">
+                </div>
+                <div>Mathematics
+                    <input value="0" type="number" name="pa_9_maths" id="">
+                </div>
+                <div>Science
+                    <input value="0" type="number" name="pa_9_sc" id="">
+                </div>
+                <div>Social Studies
+                    <input value="0" type="number" name="pa_9_sst" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">10th :
+                <div>English
+                    <input value="0" type="number" name="pa_10_eng" id="">
+                </div>
+                <div>Hindi
+                    <input value="0" type="number" name="pa_10_hin" id="">
+                </div>
+                <div>Sanskrit
+                    <input value="0" type="number" name="pa_10_skt" id="">
+                </div>
+                <div>Mathematics
+                    <input value="0" type="number" name="pa_10_maths" id="">
+                </div>
+                <div>Science
+                    <input value="0" type="number" name="pa_10_sc" id="">
+                </div>
+                <div>Social Studies
+                    <input value="0" type="number" name="pa_10_sst" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">11th :
+                <div>English
+                    <input value="0" type="number" name="pa_11_eng" id="">
+                </div>
+                <div>Hindi
+                    <input value="0" type="number" name="pa_11_hin" id="">
+                </div>
+                <div>Physics
+                    <input value="0" type="number" name="pa_11_phy" id="">
+                </div>
+                <div>Chemistry
+                    <input value="0" type="number" name="pa_11_chem" id="">
+                </div>
+                <div>Biology
+                    <input value="0" type="number" name="pa_11_bio" id="">
+                </div>
+                <div>Economics
+                    <input value="0" type="number" name="pa_11_eco" id="">
+                </div>
+                <div>History
+                    <input value="0" type="number" name="pa_11_his" id="">
+                </div>
+                <div>Sociology
+                    <input value="0" type="number" name="pa_11_socio" id="">
+                </div>
+                <div>Geography
+                    <input value="0" type="number" name="pa_11_geo" id="">
+                </div>
+                <div>Political Science
+                    <input value="0" type="number" name="pa_11_ps" id="">
+                </div>
+                <div>Mathematics
+                    <input value="0" type="number" name="pa_11_maths" id="">
+                </div>
+                <div>Krashi Ganit
+                    <input value="0" type="number" name="pa_11_krashi" id="">
+                </div>
+                <div>Pashu Palan
+                    <input value="0" type="number" name="pa_11_pashu" id="">
+                </div>
+                <div>Fasal Utpadan
+                    <input value="0" type="number" name="pa_11_fasal" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">12th :
+                <div>English
+                    <input value="0" type="number" name="pa_12_eng" id="">
+                </div>
+                <div>Hindi
+                    <input value="0" type="number" name="pa_12_hin" id="">
+                </div>
+                <div>Physics
+                    <input value="0" type="number" name="pa_12_phy" id="">
+                </div>
+                <div>Chemistry
+                    <input value="0" type="number" name="pa_12_chem" id="">
+                </div>
+                <div>Biology
+                    <input value="0" type="number" name="pa_12_bio" id="">
+                </div>
+                <div>Economics
+                    <input value="0" type="number" name="pa_12_eco" id="">
+                </div>
+                <div>History
+                    <input value="0" type="number" name="pa_12_his" id="">
+                </div>
+                <div>Sociology
+                    <input value="0" type="number" name="pa_12_socio" id="">
+                </div>
+                <div>Geography
+                    <input value="0" type="number" name="pa_12_geo" id="">
+                </div>
+                <div>Political Science
+                    <input value="0" type="number" name="pa_12_ps" id="">
+                </div>
+                <div>Mathematics
+                    <input value="0" type="number" name="pa_12_maths" id="">
+                </div>
+                <div>Krashi Ganit
+                    <input value="0" type="number" name="pa_12_krashi" id="">
+                </div>
+                <div>Pashu Palan
+                    <input value="0" type="number" name="pa_12_pashu" id="">
+                </div>
+                <div>Fasal Utpadan
+                    <input value="0" type="number" name="pa_12_fasal" id="">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>
+            <h2 style="margin : auto;" onclick="pb()">Pariksha Bodth</h2>
+            <div id="pb">
+            <div style="margin : 10px;">9th :
+                <div>english
+                    <input value="0" type="number" name="pb_9_eng" id="">
+                </div>
+                <div>hindi
+                    <input value="0" type="number" name="pb_9_hin" id="">
+                </div>
+                <div>sanskrit
+                    <input value="0" type="number" name="pb_9_skt" id="">
+                </div>
+                <div>maths
+                    <input value="0" type="number" name="pb_9_maths" id="">
+                </div>
+                <div>science
+                    <input value="0" type="number" name="pb_9_sc" id="">
+                </div>
+                <div>sst
+                    <input value="0" type="number" name="pb_9_sst" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">10th :
+                <div>english
+                    <input value="0" type="number" name="pb_10_eng" id="">
+                </div>
+                <div>hindi
+                    <input value="0" type="number" name="pb_10_hin" id="">
+                </div>
+                <div>sanskrit
+                    <input value="0" type="number" name="pb_10_skt" id="">
+                </div>
+                <div>maths
+                    <input value="0" type="number" name="pb_10_maths" id="">
+                </div>
+                <div>science
+                    <input value="0" type="number" name="pb_10_sc" id="">
+                </div>
+                <div>sst
+                    <input value="0" type="number" name="pb_10_sst" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">11th :
+                <div>english
+                    <input value="0" type="number" name="pb_11_eng" id="">
+                </div>
+                <div>hindi
+                    <input value="0" type="number" name="pb_11_hin" id="">
+                </div>
+                <div>physics
+                    <input value="0" type="number" name="pb_11_phy" id="">
+                </div>
+                <div>chemistry
+                    <input value="0" type="number" name="pb_11_chem" id="">
+                </div>
+                <div>biology
+                    <input value="0" type="number" name="pb_11_bio" id="">
+                </div>
+                <div>economics
+                    <input value="0" type="number" name="pb_11_eco" id="">
+                </div>
+                <div>history
+                    <input value="0" type="number" name="pb_11_his" id="">
+                </div>
+                <div>sociology
+                    <input value="0" type="number" name="pb_11_socio" id="">
+                </div>
+                <div>geography
+                    <input value="0" type="number" name="pb_11_geo" id="">
+                </div>
+                <div>political science
+                    <input value="0" type="number" name="pb_11_ps" id="">
+                </div>
+                <div>maths
+                    <input value="0" type="number" name="pb_11_maths" id="">
+                </div>
+                <div>krashi Ganit
+                    <input value="0" type="number" name="pb_11_krashi" id="">
+                </div>
+                <div>pbshu pblan
+                    <input value="0" type="number" name="pb_11_pbshu" id="">
+                </div>
+                <div>Fasal Utpbdan
+                    <input value="0" type="number" name="pb_11_fasal" id="">
+                </div>
+            </div>
+            <div style="margin : 10px;">12th :
+                <div>english
+                    <input value="0" type="number" name="pb_12_eng" id="">
+                </div>
+                <div>hindi
+                    <input value="0" type="number" name="pb_12_hin" id="">
+                </div>
+                <div>physics
+                    <input value="0" type="number" name="pb_12_phy" id="">
+                </div>
+                <div>chemistry
+                    <input value="0" type="number" name="pb_12_chem" id="">
+                </div>
+                <div>biology
+                    <input value="0" type="number" name="pb_12_bio" id="">
+                </div>
+                <div>economics
+                    <input value="0" type="number" name="pb_12_eco" id="">
+                </div>
+                <div>history
+                    <input value="0" type="number" name="pb_12_his" id="">
+                </div>
+                <div>sociology
+                    <input value="0" type="number" name="pb_12_socio" id="">
+                </div>
+                <div>geography
+                    <input value="0" type="number" name="pb_12_geo" id="">
+                </div>
+                <div>political science
+                    <input value="0" type="number" name="pb_12_ps" id="">
+                </div>
+                <div>maths
+                    <input value="0" type="number" name="pb_12_maths" id="">
+                </div>
+                <div>krashi Ganit
+                    <input value="0" type="number" name="pb_12_krashi" id="">
+                </div>
+                <div>pbshu pblan
+                    <input value="0" type="number" name="pb_12_pbshu" id="">
+                </div>
+                <div>Fasal Utpbdan
+                    <input value="0" type="number" name="pb_12_fasal" id="">
+                </div>
+            </div>
+        </div>
+        </div>
+        <input type="submit" value=">">
+    </div>
+    </form>
+    <script>
+        function pa() {
+  var x = document.getElementById("pa");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function pb() {
+  var x = document.getElementById("pb");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+
+        
+            
+        
+    </script>
+</body>
+
+</html>
+-->
