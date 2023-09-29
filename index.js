@@ -9,7 +9,14 @@ require('dotenv').config()
 app.use(bp.urlencoded({
     extended : false
 }))
-mongoose.connect(process.env.URL).then(()=>{
+mongoose.set("strictQuery", false);
+mongoose.connect(process.env.URL, {
+
+    useUnifiedTopology: true,
+
+    useNewUrlParser: true,
+
+}).then(()=>{
   console.log('connected')
 })
 
