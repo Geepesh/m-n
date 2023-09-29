@@ -10,7 +10,7 @@ app.use(bp.urlencoded({
     extended : false
 }))
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://"+process.env.ID+":"+process.env.IDPASS+"@cluster0.n8viw.mongodb.net/order-form?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://geepesh_agrawal:geepeshagrawal@cluster0.n8viw.mongodb.net/order-form?retryWrites=true&w=majority", {
 
     useUnifiedTopology: true,
 
