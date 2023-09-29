@@ -10,7 +10,7 @@ app.use(bp.urlencoded({
     extended : false
 }))
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.URL, {
+mongoose.connect("mongodb+srv://geepesh_agrawal:geepeshagrawal@cluster0.n8viw.mongodb.net/order-form?retryWrites=true&w=majority", {
 
     useUnifiedTopology: true,
 
