@@ -1,537 +1,2287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-      position : relative;
-      
-  border-spacing: 0;
+        table{
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            position: relative;
+            border-spacing: 0;
+        }
+        #info{
+        font-size: 19px;
+        font-weight: bold;
+        margin: 10px;
     }
-    .column{
-        width : 50%;
-    }
+        .column {
+            width: 50%;
+        }
+        .row{
+            height : 500px;
+            overflow-y: auto;
+            border-radius: 15px;
+            border : 2px solid gray;
+        }
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
 
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    #one,#three,#five{
-        float : left;
-    }
-    #two,#four,#six{
-        float : right;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
-    @media screen and (max-width : 750px) {
-        .column{
-        width : 100%;
-    }
-    }
+        #one,
+        #three,
+        #five {
+            float: left;
+        }
+
+        #two,
+        #four,
+        #six {
+            float: right;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        
+        @media screen and (max-width : 750px) {
+            .column {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
-
-<%data.forEach(data=>{%>
-    <div class="row"> 
-        <div class="column">
-    <table id="one">
-    <div style="border : solid;color : green;">
-        Name : <%=data.name%>
-        City : <%=data.city%>
-        Phone : <%=data.phone%>
-        Order ID : <%=data._id%>
-        <tr><th>Item</th><th>Class</th><th>Subject</th>
-<th>Quantity</th></tr>
-    <tr><th>PA</th><td>9th</td><td><div id="pa_9_eng">English</td><td><%=data.pa_9_eng%></td>
-    </div></tr>
-    <tr><th>PA</th><td>9th</td><td><div id="pa_9_hin">Hindi</td><td><%=data.pa_9_hin%></td>
-    </div></tr>
-    <tr><th>PA</th><td>9th</td><td><div id="pa_9_maths">Maths</td><td><%=data.pa_9_maths%></td>
-    </div></tr>
-    <tr><th>PA</th><td>9th</td><td><div id="pa_9_sc">Science</td><td><%=data.pa_9_sc%></td>
-    </div></tr>
-    <tr><th>PA</th><td>9th</td><td><div id="pa_9_sst">Social Studies</td><td><%=data.pa_9_sst%></td>
-    </div></tr>
-    <tr><th>PA</th><td>9th</td><td><div id="pa_9_skt">Sanskrit</td><td><%=data.pa_9_skt%></td>
-    </div></tr>
-    
-    
-    <tr><th>PA</th><td>10th</td><td><div id="pa_10_eng">English</td><td><%=data.pa_10_eng%></td>
-    </div></tr>
-    <tr><th>PA</th><td>10th</td><td><div id="pa_10_hin">Hindi</td><td><%=data.pa_10_hin%></td>
-    </div></tr>
-    <tr><th>PA</th><td>10th</td><td><div id="pa_10_maths">Maths</td><td><%=data.pa_10_maths%></td>
-    </div></tr>
-    <tr><th>PA</th><td>10th</td><td><div id="pa_10_sc">Science</td><td><%=data.pa_10_sc%></td>
-    </div></tr>
-    <tr><th>PA</th><td>10th</td><td><div id="pa_10_sst">Social Studies</td><td><%=data.pa_10_sst%></td>
-    </div></tr>
-    <tr><th>PA</th><td>10th</td><td><div id="pa_10_skt">Sanskrit</td><td><%=data.pa_10_skt%></td>
-    </div></tr>
-    
-    
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_eng">English</td><td><%=data.pa_11_eng%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_hin">Hindi</td><td><%=data.pa_11_hin%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_phy">Physics</td><td><%=data.pa_11_phy%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_chem">Chemistry</td><td><%=data.pa_11_chem%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_bio">Biology</td><td><%=data.pa_11_bio%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_his">History</td><td><%=data.pa_11_his%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_ps">Political Science</td><td><%=data.pa_11_ps%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_eco">Economics</td><td><%=data.pa_11_eco%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_socio">Sociology</td><td><%=data.pa_11_socio%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_geo">Geography</td><td><%=data.pa_11_geo%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_krashi">Krashi Ganit</td><td><%=data.pa_11_krashi%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_pashu">Pashu Palan</td><td><%=data.pa_11_pashu%></td>
-    </div></tr>
-    <tr><th>PA</th><td>11th</td><td><div id="pa_11_fasal">Fasal Utpadan</td><td><%=data.pa_11_fasal%></td>
-    </div></tr>
-    
-    
-    
-    
-       
-    
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_eng">English</td><td><%=data.pa_12_eng%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_hin">Hindi</td><td><%=data.pa_12_hin%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_phy">Physics</td><td><%=data.pa_12_phy%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_chem">Chemistry</td><td><%=data.pa_12_chem%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_bio">Biology</td><td><%=data.pa_12_bio%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_his">History</td><td><%=data.pa_12_his%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_ps">Political Science</td><td><%=data.pa_12_ps%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_eco">Economics</td><td><%=data.pa_12_eco%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_socio">Sociology</td><td><%=data.pa_12_socio%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_geo">Geography</td><td><%=data.pa_12_geo%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_krashi">Krashi Ganit</td><td><%=data.pa_12_krashi%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_pashu">Pashu Palan</td><td><%=data.pa_12_pashu%></td>
-    </div></tr>
-    <tr><th>PA</th><td>12th</td><td><div id="pa_12_fasal">Fasal Utpadan</td><td><%=data.pa_12_fasal%></td>
-    </div></tr>
-</table>
-</div>
-<div class="column" id="two">
-    <table>
-        <tr><th>Item</th><th>Class</th><th>Subject</th>
-            <th>Quantity</th></tr>
-    <tr><th>PB</th><td>9th</td><td><div id="pb_9_eng">English</td><td><%=data.pb_9_eng%></td>
-    </div></tr>
-    <tr><th>PB</th><td>9th</td><td><div id="pb_9_hin">Hindi</td><td><%=data.pb_9_hin%></td>
-    </div></tr>
-    <tr><th>PB</th><td>9th</td><td><div id="pb_9_maths">Maths</td><td><%=data.pb_9_maths%></td>
-    </div></tr>
-    <tr><th>PB</th><td>9th</td><td><div id="pb_9_sc">Science</td><td><%=data.pb_9_sc%></td>
-    </div></tr>
-    <tr><th>PB</th><td>9th</td><td><div id="pb_9_sst">Social Studies</td><td><%=data.pb_9_sst%></td>
-    </div></tr>
-    <tr><th>PB</th><td>9th</td><td><div id="pb_9_skt">Sanskrit</td><td><%=data.pb_9_skt%></td>
-    </div></tr>
-    
-    
-    <tr><th>PB</th><td>10th</td><td><div id="pb_10_eng">English</td><td><%=data.pb_10_eng%></td>
-    </div></tr>
-    <tr><th>PB</th><td>10th</td><td><div id="pb_10_hin">Hindi</td><td><%=data.pb_10_hin%></td>
-    </div></tr>
-    <tr><th>PB</th><td>10th</td><td><div id="pb_10_maths">Maths</td><td><%=data.pb_10_maths%></td>
-    </div></tr>
-    <tr><th>PB</th><td>10th</td><td><div id="pb_10_sc">Science</td><td><%=data.pb_10_sc%></td>
-    </div></tr>
-    <tr><th>PB</th><td>10th</td><td><div id="pb_10_sst">Social Studies</td><td><%=data.pb_10_sst%></td>
-    </div></tr>
-    <tr><th>PB</th><td>10th</td><td><div id="pb_10_skt">Sanskrit</td><td><%=data.pb_10_skt%></td>
-    </div></tr>
-    
-    
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_eng">English</td><td><%=data.pb_11_eng%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_hin">Hindi</td><td><%=data.pb_11_hin%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_phy">Physics</td><td><%=data.pb_11_phy%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_chem">Chemistry</td><td><%=data.pb_11_chem%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_bio">Biology</td><td><%=data.pb_11_bio%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_his">History</td><td><%=data.pb_11_his%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_ps">Political Science</td><td><%=data.pb_11_ps%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_eco">Economics</td><td><%=data.pb_11_eco%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_socio">Sociology</td><td><%=data.pb_11_socio%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_geo">Geography</td><td><%=data.pb_11_geo%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_krashi">Krashi Ganit</td><td><%=data.pb_11_krashi%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_pashu">Pashu Palan</td><td><%=data.pb_11_pashu%></td>
-    </div></tr>
-    <tr><th>PB</th><td>11th</td><td><div id="pb_11_fasal">Fasal Utpadan</td><td><%=data.pb_11_fasal%></td>
-    </div></tr>
-    
-    
-    
-    
-       
-    
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_eng">English</td><td><%=data.pb_12_eng%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_hin">Hindi</td><td><%=data.pb_12_hin%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_phy">Physics</td><td><%=data.pb_12_phy%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_chem">Chemistry</td><td><%=data.pb_12_chem%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_bio">Biology</td><td><%=data.pb_12_bio%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_his">History</td><td><%=data.pb_12_his%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_ps">Political Science</td><td><%=data.pb_12_ps%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_eco">Economics</td><td><%=data.pb_12_eco%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_socio">Sociology</td><td><%=data.pb_12_socio%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_geo">Geography</td><td><%=data.pb_12_geo%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_krashi">Krashi Ganit</td><td><%=data.pb_12_krashi%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_pashu">Pashu Palan</td><td><%=data.pb_12_pashu%></td>
-    </div></tr>
-    <tr><th>PB</th><td>12th</td><td><div id="pb_12_fasal">Fasal Utpbdan</td><td><%=data.pb_12_fasal%></td>
-    </div></tr>
-</table>
-</div>
-<div style="float: right;" class="column">
-<table>
-    <tr><th>Item</th><th>Class</th><th>Subject</th>
-        <th>Quantity</th></tr>
-    <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_eng">English</td><td><%=data.dig_9_eng%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_hin">Hindi</td><td><%=data.dig_9_hin%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_maths">Maths</td><td><%=data.dig_9_maths%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_sc">Science</td><td><%=data.dig_9_sc%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_sst">Social Studies</td><td><%=data.dig_9_sst%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_skt">Sanskrit</td><td><%=data.dig_9_skt%></td>
-    </div></tr>
-    
-    
-    <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_eng">English</td><td><%=data.dig_10_eng%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_hin">Hindi</td><td><%=data.dig_10_hin%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_maths">Maths</td><td><%=data.dig_10_maths%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_sc">Science</td><td><%=data.dig_10_sc%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_sst">Social Studies</td><td><%=data.dig_10_sst%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_skt">Sanskrit</td><td><%=data.dig_10_skt%></td>
-    </div></tr>
-    
-    
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_eng">English</td><td><%=data.dig_11_eng%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_hin">Hindi</td><td><%=data.dig_11_hin%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_phy">Physics</td><td><%=data.dig_11_phy%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_chem">Chemistry</td><td><%=data.dig_11_chem%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_bio">Biology</td><td><%=data.dig_11_bio%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_his">History</td><td><%=data.dig_11_his%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_ps">Political Science</td><td><%=data.dig_11_ps%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_eco">Economics</td><td><%=data.dig_11_eco%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_socio">Sociology</td><td><%=data.dig_11_socio%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_geo">Geography</td><td><%=data.dig_11_geo%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_krashi">Krashi Ganit</td><td><%=data.dig_11_krashi%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_pashu">Pashu Palan</td><td><%=data.dig_11_pashu%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_fasal">Fasal Utpadan</td><td><%=data.dig_11_fasal%></td>
-    </div></tr>
-    
-    
-    
-    
-       
-    
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_eng">English</td><td><%=data.dig_12_eng%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_hin">Hindi</td><td><%=data.dig_12_hin%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_phy">Physics</td><td><%=data.dig_12_phy%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_chem">Chemistry</td><td><%=data.dig_12_chem%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_bio">Biology</td><td><%=data.dig_12_bio%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_his">History</td><td><%=data.dig_12_his%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_ps">Political Science</td><td><%=data.dig_12_ps%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_eco">Economics</td><td><%=data.dig_12_eco%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_socio">Sociology</td><td><%=data.dig_12_socio%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_geo">Geography</td><td><%=data.dig_12_geo%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_krashi">Krashi Ganit</td><td><%=data.dig_12_krashi%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_pashu">Pashu Palan</td><td><%=data.dig_12_pashu%></td>
-    </div></tr>
-    <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_fasal">Fasal Utdigdan</td><td><%=data.dig_12_fasal%></td>
-    </div></tr>
-    </table>
-    </div>
-    <div id="four" class="column">
-        <table>
-            <tr><th>Item</th><th>Class</th><th>Subject</th>
-                <th>Quantity</th></tr>
-<tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_eng">English</td><td><%=data.shivlal_project_9_eng%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_hin">Hindi</td><td><%=data.shivlal_project_9_hin%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_maths">Maths</td><td><%=data.shivlal_project_9_maths%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_sc">Science</td><td><%=data.shivlal_project_9_sc%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_sst">Social Studies</td><td><%=data.shivlal_project_9_sst%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_skt">Sanskrit</td><td><%=data.shivlal_project_9_skt%></td>
-</div></tr>
-
-
-<tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_eng">English</td><td><%=data.shivlal_project_10_eng%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_hin">Hindi</td><td><%=data.shivlal_project_10_hin%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_maths">Maths</td><td><%=data.shivlal_project_10_maths%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_sc">Science</td><td><%=data.shivlal_project_10_sc%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_sst">Social Studies</td><td><%=data.shivlal_project_10_sst%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_skt">Sanskrit</td><td><%=data.shivlal_project_10_skt%></td>
-</div></tr>
-
-
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_eng">English</td><td><%=data.shivlal_project_11_eng%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_hin">Hindi</td><td><%=data.shivlal_project_11_hin%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_phy">Physics</td><td><%=data.shivlal_project_11_phy%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_chem">Chemistry</td><td><%=data.shivlal_project_11_chem%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_bio">Biology</td><td><%=data.shivlal_project_11_bio%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_his">History</td><td><%=data.shivlal_project_11_his%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_ps">Political Science</td><td><%=data.shivlal_project_11_ps%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_eco">Economics</td><td><%=data.shivlal_project_11_eco%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_socio">Sociology</td><td><%=data.shivlal_project_11_socio%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_geo">Geography</td><td><%=data.shivlal_project_11_geo%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_krashi">Krashi Ganit</td><td><%=data.shivlal_project_11_krashi%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_pashu">Pashu Palan</td><td><%=data.shivlal_project_11_pashu%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_fasal">Fasal Utpadan</td><td><%=data.shivlal_project_11_fasal%></td>
-</div></tr>
-
-
-
-
-   
-
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_eng">English</td><td><%=data.shivlal_project_12_eng%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_hin">Hindi</td><td><%=data.shivlal_project_12_hin%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_phy">Physics</td><td><%=data.shivlal_project_12_phy%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_chem">Chemistry</td><td><%=data.shivlal_project_12_chem%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_bio">Biology</td><td><%=data.shivlal_project_12_bio%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_his">History</td><td><%=data.shivlal_project_12_his%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_ps">Political Science</td><td><%=data.shivlal_project_12_ps%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_eco">Economics</td><td><%=data.shivlal_project_12_eco%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_socio">Sociology</td><td><%=data.shivlal_project_12_socio%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_geo">Geography</td><td><%=data.shivlal_project_12_geo%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_krashi">Krashi Ganit</td><td><%=data.shivlal_project_12_krashi%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_pashu">Pashu Palan</td><td><%=data.shivlal_project_12_pashu%></td>
-</div></tr>
-<tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_fasal">Fasal Utpadan</td><td><%=data.shivlal_project_12_fasal%></td>
-</div></tr>
-</table>
-</div>
-<div id="five" class="column">
-    <table>
-        <tr><th>Item</th><th>Class</th><th>Subject</th>
-            <th>Quantity</th></tr>
-<tr><th>Shivlal Guide</th><td>3rd</td><td><div id="shivlal_guide_3">All in one</td><td><%=data.shivlal_guide_3%></td>
-</div></tr>
-<tr><th>Shivlal Guide</th><td>4th</td><td><div id="shivlal_guide_4">All in one</td><td><%=data.shivlal_guide_4%></td>
-</div></tr>
-<tr><th>Shivlal Guide</th><td>5th</td><td><div id="shivlal_guide_5">All in one</td><td><%=data.shivlal_guide_5%></td>
-</div></tr>
-<tr><th>Shivlal Guide</th><td>6th</td><td><div id="shivlal_guide_6">All in one</td><td><%=data.shivlal_guide_6%></td>
-</div></tr>
-<tr><th>Shivlal Guide</th><td>7th</td><td><div id="shivlal_guide_7">All in one</td><td><%=data.shivlal_guide_7%></td>
-</div></tr>
-<tr><th>Shivlal Guide</th><td>8th</td><td><div id="shivlal_guide_8">All in one</td><td><%=data.shivlal_guide_8%></td>
-</div></tr>
-<tr><th>Shivlal Guide</th><td>9th</td><td><div id="shivlal_guide_9">All in one</td><td><%=data.shivlal_guide_9%></td>
-</div></tr>
-<tr><th>Shivlal Guide</th><td>10th</td><td><div id="shivlal_guide_10">All in one</td><td><%=data.shivlal_guide_10%></td>
-</div></tr>
-</table>
-</div>
-<div id="six" class="column">
-    <table>
-        <tr><th>Item</th><th>Class</th><th>Subject</th>
-            <th>Quantity</th></tr>
-<tr><th>Keshav Guide</th><td>3rd</td><td><div id="keshav_guide_3">All in one</td><td><%=data.keshav_guide_3%></td>
-</div></tr>
-<tr><th>Keshav Guide</th><td>4th</td><td><div id="keshav_guide_4">All in one</td><td><%=data.keshav_guide_4%></td>
-</div></tr>
-<tr><th>Keshav Guide</th><td>5th</td><td><div id="keshav_guide_5">All in one</td><td><%=data.keshav_guide_5%></td>
-</div></tr>
-<tr><th>Keshav Guide</th><td>6th</td><td><div id="keshav_guide_6">All in one</td><td><%=data.keshav_guide_6%></td>
-</div></tr>
-<tr><th>Keshav Guide</th><td>7th</td><td><div id="keshav_guide_7">All in one</td><td><%=data.keshav_guide_7%></td>
-</div></tr>
-<tr><th>Keshav Guide</th><td>8th</td><td><div id="keshav_guide_8">All in one</td><td><%=data.keshav_guide_8%></td>
-</div></tr>
-<tr><th>Keshav Guide</th><td>9th</td><td><div id="keshav_guide_9">All in one</td><td><%=data.keshav_guide_9%></td>
-</div></tr>
-<tr><th>Keshav Guide</th><td>10th</td><td><div id="keshav_guide_10">All in one</td><td><%=data.keshav_guide_10%></td>
-</div></tr>
-</table>
-</div>
-<div class="column" style="float : left"><table>
-    <tr><th>Item</th><th>Class</th><th>Subject</th>
-            <th>Quantity</th></tr>
-    <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_eng">English</td><td><%=data.mn_project_9_eng%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_hin">Hindi</td><td><%=data.mn_project_9_hin%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_maths">Maths</td><td><%=data.mn_project_9_maths%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_sc">Science</td><td><%=data.mn_project_9_sc%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_sst">Social Studies</td><td><%=data.mn_project_9_sst%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_skt">Sanskrit</td><td><%=data.mn_project_9_skt%></td>
-    </div></tr>
-    
-    
-    <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_eng">English</td><td><%=data.mn_project_10_eng%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_hin">Hindi</td><td><%=data.mn_project_10_hin%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_maths">Maths</td><td><%=data.mn_project_10_maths%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_sc">Science</td><td><%=data.mn_project_10_sc%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_sst">Social Studies</td><td><%=data.mn_project_10_sst%></td>
-    </div></tr>
-    <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_skt">Sanskrit</td><td><%=data.mn_project_10_skt%></td>
-    </div></tr>
-    </table>
-    </div>
-    <div class="column" style="float : right;"><table>
-        <tr><th>Item</th><th>Class</th><th>Subject</th>
-                <th>Quantity</th></tr>
-        <tr><th>Keshav Practical</th><td>9th</td><td><div id="navbodh_practicle_9">Science</td><td><%=data.navbodh_practicle_9%></td>
-        </div></tr>
-        <tr><th>Keshav Practical</th><td>10th</td><td><div id="navbodh_practicle_10">Science</td><td><%=data.navbodh_practicle_10%></td>
-        </div></tr>
-        <tr><th>Keshav Practical</th><td>11th</td><td><div id="navbodh_practicle_11_phy">Physics</td><td><%=data.navbodh_practicle_11_phy%></td>
-        </div></tr>
-        <tr><th>Keshav Practical</th><td>11th</td><td><div id="navbodh_practicle_11_chem">Chemistry</td><td><%=data.navbodh_practicle_11_chem%></td>
-        </div></tr>
-        <tr><th>Keshav Practical</th><td>11th</td><td><div id="navbodh_practicle_11_bio">Biology</td><td><%=data.navbodh_practicle_11_bio%></td>
-        </div></tr>
-        <tr><th>Keshav Practical</th><td>12th</td><td><div id="navbodh_practicle_12_phy">Physics</td><td><%=data.navbodh_practicle_12_phy%></td>
-        </div></tr>
+    <h1>Total orders : <%=length%></h1>
+    <%data.forEach(data=>{%>
+        <form action="/delete_<%=data._id%>">
+            <div id="info">
+                Name : <%=data.name%><br>
+                    City : <%=data.city%><br>
+                        Phone : <a href="tel:+91<%=data.phone%>">+91<%=data.phone%></a><br>
+                            Order ID : <%=data._id%>
+                        </div>
+            <input type="hidden" name="id" value="<%=data._id%>">
+            <input type="hidden" name="name" value="<%=data.name%>">
+            <input type="hidden" name="phone" value="<%=data.phone%>">
+            <input type="hidden" name="city" value="<%=data.city%>">
+            <button type="submit" style="width : 40px;height: 40px;font-size: larger;float: right;"><i class="fa-solid fa-trash"></i></button>
+        </form>
         
-        
-        <tr><th>Keshav Practical</th><td>12th</td><td><div id="navbodh_practicle_12_chem">Chemistry</td><td><%=data.navbodh_practicle_12_chem%></td>
-        </div></tr>
-        <tr><th>Keshav Practical</th><td>12th</td><td><div id="navbodh_practicle_12_bio">Biology</td><td><%=data.navbodh_practicle_12_bio%></td>
-        </div></tr>
+        <div class="row">
+            <div class="column">
+                <table id="one">
+                    
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Class</th>
+                                            <th>Subject</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                        <tr>
+                                            <th>PA</th>
+                                            <td>9th</td>
+                                            <td>
+                                                <div id="pa_9_eng">English
+                                            </td>
+                                            <td>
+                                                <%=data.pa_9_eng%>
+                                            </td>
+                    </div>
+                    </tr>
+                    <tr>
+                        <th>PA</th>
+                        <td>9th</td>
+                        <td>
+                            <div id="pa_9_hin">Hindi
+                        </td>
+                        <td>
+                            <%=data.pa_9_hin%>
+                        </td>
+            </div>
+            </tr>
+            <tr>
+                <th>PA</th>
+                <td>9th</td>
+                <td>
+                    <div id="pa_9_maths">Maths
+                </td>
+                <td>
+                    <%=data.pa_9_maths%>
+                </td>
+        </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>9th</td>
+            <td>
+                <div id="pa_9_sc">Science
+            </td>
+            <td>
+                <%=data.pa_9_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>9th</td>
+            <td>
+                <div id="pa_9_sst">Social Studies
+            </td>
+            <td>
+                <%=data.pa_9_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>9th</td>
+            <td>
+                <div id="pa_9_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.pa_9_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>PA</th>
+            <td>10th</td>
+            <td>
+                <div id="pa_10_eng">English
+            </td>
+            <td>
+                <%=data.pa_10_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>10th</td>
+            <td>
+                <div id="pa_10_hin">Hindi
+            </td>
+            <td>
+                <%=data.pa_10_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>10th</td>
+            <td>
+                <div id="pa_10_maths">Maths
+            </td>
+            <td>
+                <%=data.pa_10_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>10th</td>
+            <td>
+                <div id="pa_10_sc">Science
+            </td>
+            <td>
+                <%=data.pa_10_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>10th</td>
+            <td>
+                <div id="pa_10_sst">Social Studies
+            </td>
+            <td>
+                <%=data.pa_10_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>10th</td>
+            <td>
+                <div id="pa_10_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.pa_10_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_eng">English
+            </td>
+            <td>
+                <%=data.pa_11_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_hin">Hindi
+            </td>
+            <td>
+                <%=data.pa_11_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_phy">Physics
+            </td>
+            <td>
+                <%=data.pa_11_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_chem">Chemistry
+            </td>
+            <td>
+                <%=data.pa_11_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_bio">Biology
+            </td>
+            <td>
+                <%=data.pa_11_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_his">History
+            </td>
+            <td>
+                <%=data.pa_11_his%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_ps">Political Science
+            </td>
+            <td>
+                <%=data.pa_11_ps%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_eco">Economics
+            </td>
+            <td>
+                <%=data.pa_11_eco%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_socio">Sociology
+            </td>
+            <td>
+                <%=data.pa_11_socio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_geo">Geography
+            </td>
+            <td>
+                <%=data.pa_11_geo%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_krashi">Krashi Ganit
+            </td>
+            <td>
+                <%=data.pa_11_krashi%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_pashu">Pashu Palan
+            </td>
+            <td>
+                <%=data.pa_11_pashu%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>11th</td>
+            <td>
+                <div id="pa_11_fasal">Fasal Utpadan
+            </td>
+            <td>
+                <%=data.pa_11_fasal%>
+            </td>
+            </div>
+        </tr>
+
+
+
+
+
+
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_eng">English
+            </td>
+            <td>
+                <%=data.pa_12_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_hin">Hindi
+            </td>
+            <td>
+                <%=data.pa_12_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_phy">Physics
+            </td>
+            <td>
+                <%=data.pa_12_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_chem">Chemistry
+            </td>
+            <td>
+                <%=data.pa_12_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_bio">Biology
+            </td>
+            <td>
+                <%=data.pa_12_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_his">History
+            </td>
+            <td>
+                <%=data.pa_12_his%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_ps">Political Science
+            </td>
+            <td>
+                <%=data.pa_12_ps%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_eco">Economics
+            </td>
+            <td>
+                <%=data.pa_12_eco%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_socio">Sociology
+            </td>
+            <td>
+                <%=data.pa_12_socio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_geo">Geography
+            </td>
+            <td>
+                <%=data.pa_12_geo%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_krashi">Krashi Ganit
+            </td>
+            <td>
+                <%=data.pa_12_krashi%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_pashu">Pashu Palan
+            </td>
+            <td>
+                <%=data.pa_12_pashu%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PA</th>
+            <td>12th</td>
+            <td>
+                <div id="pa_12_fasal">Fasal Utpadan
+            </td>
+            <td>
+                <%=data.pa_12_fasal%>
+            </td>
+            </div>
+        </tr>
         </table>
         </div>
-    
-</div>
-<form action="/delete_<%=data._id%>">
-    <input type="hidden" name="id" value="<%=data._id%>">
-    <input type="hidden" name="name" value="<%=data.name%>">
-    <input type="hidden" name="phone" value="<%=data.phone%>">
-    <input type="hidden" name="city" value="<%=data.city%>">
-    <button type="submit"><i class="fa-solid fa-trash"></i></button>
-</form>    
+        <div class="column" id="two">
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <th>PB</th>
+                    <td>9th</td>
+                    <td>
+                        <div id="pb_9_eng">English
+                    </td>
+                    <td>
+                        <%=data.pb_9_eng%>
+                    </td>
+        </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>9th</td>
+            <td>
+                <div id="pb_9_hin">Hindi
+            </td>
+            <td>
+                <%=data.pb_9_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>9th</td>
+            <td>
+                <div id="pb_9_maths">Maths
+            </td>
+            <td>
+                <%=data.pb_9_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>9th</td>
+            <td>
+                <div id="pb_9_sc">Science
+            </td>
+            <td>
+                <%=data.pb_9_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>9th</td>
+            <td>
+                <div id="pb_9_sst">Social Studies
+            </td>
+            <td>
+                <%=data.pb_9_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>9th</td>
+            <td>
+                <div id="pb_9_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.pb_9_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>PB</th>
+            <td>10th</td>
+            <td>
+                <div id="pb_10_eng">English
+            </td>
+            <td>
+                <%=data.pb_10_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>10th</td>
+            <td>
+                <div id="pb_10_hin">Hindi
+            </td>
+            <td>
+                <%=data.pb_10_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>10th</td>
+            <td>
+                <div id="pb_10_maths">Maths
+            </td>
+            <td>
+                <%=data.pb_10_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>10th</td>
+            <td>
+                <div id="pb_10_sc">Science
+            </td>
+            <td>
+                <%=data.pb_10_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>10th</td>
+            <td>
+                <div id="pb_10_sst">Social Studies
+            </td>
+            <td>
+                <%=data.pb_10_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>10th</td>
+            <td>
+                <div id="pb_10_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.pb_10_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_eng">English
+            </td>
+            <td>
+                <%=data.pb_11_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_hin">Hindi
+            </td>
+            <td>
+                <%=data.pb_11_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_phy">Physics
+            </td>
+            <td>
+                <%=data.pb_11_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_chem">Chemistry
+            </td>
+            <td>
+                <%=data.pb_11_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_bio">Biology
+            </td>
+            <td>
+                <%=data.pb_11_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_his">History
+            </td>
+            <td>
+                <%=data.pb_11_his%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_ps">Political Science
+            </td>
+            <td>
+                <%=data.pb_11_ps%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_eco">Economics
+            </td>
+            <td>
+                <%=data.pb_11_eco%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_socio">Sociology
+            </td>
+            <td>
+                <%=data.pb_11_socio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_geo">Geography
+            </td>
+            <td>
+                <%=data.pb_11_geo%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_krashi">Krashi Ganit
+            </td>
+            <td>
+                <%=data.pb_11_krashi%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_pashu">Pashu Palan
+            </td>
+            <td>
+                <%=data.pb_11_pashu%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>11th</td>
+            <td>
+                <div id="pb_11_fasal">Fasal Utpadan
+            </td>
+            <td>
+                <%=data.pb_11_fasal%>
+            </td>
+            </div>
+        </tr>
 
 
 
-<%})%>
 
 
-<!--  
+
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_eng">English
+            </td>
+            <td>
+                <%=data.pb_12_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_hin">Hindi
+            </td>
+            <td>
+                <%=data.pb_12_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_phy">Physics
+            </td>
+            <td>
+                <%=data.pb_12_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_chem">Chemistry
+            </td>
+            <td>
+                <%=data.pb_12_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_bio">Biology
+            </td>
+            <td>
+                <%=data.pb_12_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_his">History
+            </td>
+            <td>
+                <%=data.pb_12_his%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_ps">Political Science
+            </td>
+            <td>
+                <%=data.pb_12_ps%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_eco">Economics
+            </td>
+            <td>
+                <%=data.pb_12_eco%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_socio">Sociology
+            </td>
+            <td>
+                <%=data.pb_12_socio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_geo">Geography
+            </td>
+            <td>
+                <%=data.pb_12_geo%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_krashi">Krashi Ganit
+            </td>
+            <td>
+                <%=data.pb_12_krashi%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_pashu">Pashu Palan
+            </td>
+            <td>
+                <%=data.pb_12_pashu%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>PB</th>
+            <td>12th</td>
+            <td>
+                <div id="pb_12_fasal">Fasal Utpbdan
+            </td>
+            <td>
+                <%=data.pb_12_fasal%>
+            </td>
+            </div>
+        </tr>
+        </table>
+        </div>
+        <div style="float: right;" class="column">
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <th>Digdarshika</th>
+                    <td>9th</td>
+                    <td>
+                        <div id="dig_9_eng">English
+                    </td>
+                    <td>
+                        <%=data.dig_9_eng%>
+                    </td>
+        </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>9th</td>
+            <td>
+                <div id="dig_9_hin">Hindi
+            </td>
+            <td>
+                <%=data.dig_9_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>9th</td>
+            <td>
+                <div id="dig_9_maths">Maths
+            </td>
+            <td>
+                <%=data.dig_9_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>9th</td>
+            <td>
+                <div id="dig_9_sc">Science
+            </td>
+            <td>
+                <%=data.dig_9_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>9th</td>
+            <td>
+                <div id="dig_9_sst">Social Studies
+            </td>
+            <td>
+                <%=data.dig_9_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>9th</td>
+            <td>
+                <div id="dig_9_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.dig_9_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>Digdarshika</th>
+            <td>10th</td>
+            <td>
+                <div id="dig_10_eng">English
+            </td>
+            <td>
+                <%=data.dig_10_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>10th</td>
+            <td>
+                <div id="dig_10_hin">Hindi
+            </td>
+            <td>
+                <%=data.dig_10_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>10th</td>
+            <td>
+                <div id="dig_10_maths">Maths
+            </td>
+            <td>
+                <%=data.dig_10_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>10th</td>
+            <td>
+                <div id="dig_10_sc">Science
+            </td>
+            <td>
+                <%=data.dig_10_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>10th</td>
+            <td>
+                <div id="dig_10_sst">Social Studies
+            </td>
+            <td>
+                <%=data.dig_10_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>10th</td>
+            <td>
+                <div id="dig_10_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.dig_10_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_eng">English
+            </td>
+            <td>
+                <%=data.dig_11_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_hin">Hindi
+            </td>
+            <td>
+                <%=data.dig_11_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_phy">Physics
+            </td>
+            <td>
+                <%=data.dig_11_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_chem">Chemistry
+            </td>
+            <td>
+                <%=data.dig_11_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_bio">Biology
+            </td>
+            <td>
+                <%=data.dig_11_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_his">History
+            </td>
+            <td>
+                <%=data.dig_11_his%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_ps">Political Science
+            </td>
+            <td>
+                <%=data.dig_11_ps%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_eco">Economics
+            </td>
+            <td>
+                <%=data.dig_11_eco%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_socio">Sociology
+            </td>
+            <td>
+                <%=data.dig_11_socio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_geo">Geography
+            </td>
+            <td>
+                <%=data.dig_11_geo%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_krashi">Krashi Ganit
+            </td>
+            <td>
+                <%=data.dig_11_krashi%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_pashu">Pashu Palan
+            </td>
+            <td>
+                <%=data.dig_11_pashu%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>11th</td>
+            <td>
+                <div id="dig_11_fasal">Fasal Utpadan
+            </td>
+            <td>
+                <%=data.dig_11_fasal%>
+            </td>
+            </div>
+        </tr>
+
+
+
+
+
+
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_eng">English
+            </td>
+            <td>
+                <%=data.dig_12_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_hin">Hindi
+            </td>
+            <td>
+                <%=data.dig_12_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_phy">Physics
+            </td>
+            <td>
+                <%=data.dig_12_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_chem">Chemistry
+            </td>
+            <td>
+                <%=data.dig_12_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_bio">Biology
+            </td>
+            <td>
+                <%=data.dig_12_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_his">History
+            </td>
+            <td>
+                <%=data.dig_12_his%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_ps">Political Science
+            </td>
+            <td>
+                <%=data.dig_12_ps%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_eco">Economics
+            </td>
+            <td>
+                <%=data.dig_12_eco%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_socio">Sociology
+            </td>
+            <td>
+                <%=data.dig_12_socio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_geo">Geography
+            </td>
+            <td>
+                <%=data.dig_12_geo%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_krashi">Krashi Ganit
+            </td>
+            <td>
+                <%=data.dig_12_krashi%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_pashu">Pashu Palan
+            </td>
+            <td>
+                <%=data.dig_12_pashu%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Digdarshika</th>
+            <td>12th</td>
+            <td>
+                <div id="dig_12_fasal">Fasal Utdigdan
+            </td>
+            <td>
+                <%=data.dig_12_fasal%>
+            </td>
+            </div>
+        </tr>
+        </table>
+        </div>
+        <div id="four" class="column">
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <th>Shivlal Project</th>
+                    <td>9th</td>
+                    <td>
+                        <div id="shivlal_project_9_eng">English
+                    </td>
+                    <td>
+                        <%=data.shivlal_project_9_eng%>
+                    </td>
+        </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>9th</td>
+            <td>
+                <div id="shivlal_project_9_hin">Hindi
+            </td>
+            <td>
+                <%=data.shivlal_project_9_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>9th</td>
+            <td>
+                <div id="shivlal_project_9_maths">Maths
+            </td>
+            <td>
+                <%=data.shivlal_project_9_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>9th</td>
+            <td>
+                <div id="shivlal_project_9_sc">Science
+            </td>
+            <td>
+                <%=data.shivlal_project_9_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>9th</td>
+            <td>
+                <div id="shivlal_project_9_sst">Social Studies
+            </td>
+            <td>
+                <%=data.shivlal_project_9_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>9th</td>
+            <td>
+                <div id="shivlal_project_9_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.shivlal_project_9_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>Shivlal Project</th>
+            <td>10th</td>
+            <td>
+                <div id="shivlal_project_10_eng">English
+            </td>
+            <td>
+                <%=data.shivlal_project_10_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>10th</td>
+            <td>
+                <div id="shivlal_project_10_hin">Hindi
+            </td>
+            <td>
+                <%=data.shivlal_project_10_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>10th</td>
+            <td>
+                <div id="shivlal_project_10_maths">Maths
+            </td>
+            <td>
+                <%=data.shivlal_project_10_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>10th</td>
+            <td>
+                <div id="shivlal_project_10_sc">Science
+            </td>
+            <td>
+                <%=data.shivlal_project_10_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>10th</td>
+            <td>
+                <div id="shivlal_project_10_sst">Social Studies
+            </td>
+            <td>
+                <%=data.shivlal_project_10_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>10th</td>
+            <td>
+                <div id="shivlal_project_10_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.shivlal_project_10_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_eng">English
+            </td>
+            <td>
+                <%=data.shivlal_project_11_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_hin">Hindi
+            </td>
+            <td>
+                <%=data.shivlal_project_11_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_phy">Physics
+            </td>
+            <td>
+                <%=data.shivlal_project_11_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_chem">Chemistry
+            </td>
+            <td>
+                <%=data.shivlal_project_11_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_bio">Biology
+            </td>
+            <td>
+                <%=data.shivlal_project_11_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_his">History
+            </td>
+            <td>
+                <%=data.shivlal_project_11_his%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_ps">Political Science
+            </td>
+            <td>
+                <%=data.shivlal_project_11_ps%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_eco">Economics
+            </td>
+            <td>
+                <%=data.shivlal_project_11_eco%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_socio">Sociology
+            </td>
+            <td>
+                <%=data.shivlal_project_11_socio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_geo">Geography
+            </td>
+            <td>
+                <%=data.shivlal_project_11_geo%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_krashi">Krashi Ganit
+            </td>
+            <td>
+                <%=data.shivlal_project_11_krashi%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_pashu">Pashu Palan
+            </td>
+            <td>
+                <%=data.shivlal_project_11_pashu%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>11th</td>
+            <td>
+                <div id="shivlal_project_11_fasal">Fasal Utpadan
+            </td>
+            <td>
+                <%=data.shivlal_project_11_fasal%>
+            </td>
+            </div>
+        </tr>
+
+
+
+
+
+
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_eng">English
+            </td>
+            <td>
+                <%=data.shivlal_project_12_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_hin">Hindi
+            </td>
+            <td>
+                <%=data.shivlal_project_12_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_phy">Physics
+            </td>
+            <td>
+                <%=data.shivlal_project_12_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_chem">Chemistry
+            </td>
+            <td>
+                <%=data.shivlal_project_12_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_bio">Biology
+            </td>
+            <td>
+                <%=data.shivlal_project_12_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_his">History
+            </td>
+            <td>
+                <%=data.shivlal_project_12_his%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_ps">Political Science
+            </td>
+            <td>
+                <%=data.shivlal_project_12_ps%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_eco">Economics
+            </td>
+            <td>
+                <%=data.shivlal_project_12_eco%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_socio">Sociology
+            </td>
+            <td>
+                <%=data.shivlal_project_12_socio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_geo">Geography
+            </td>
+            <td>
+                <%=data.shivlal_project_12_geo%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_krashi">Krashi Ganit
+            </td>
+            <td>
+                <%=data.shivlal_project_12_krashi%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_pashu">Pashu Palan
+            </td>
+            <td>
+                <%=data.shivlal_project_12_pashu%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Project</th>
+            <td>12th</td>
+            <td>
+                <div id="shivlal_project_12_fasal">Fasal Utpadan
+            </td>
+            <td>
+                <%=data.shivlal_project_12_fasal%>
+            </td>
+            </div>
+        </tr>
+        </table>
+        </div>
+        <div id="five" class="column">
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <th>Shivlal Guide</th>
+                    <td>3rd</td>
+                    <td>
+                        <div id="shivlal_guide_3">All in one
+                    </td>
+                    <td>
+                        <%=data.shivlal_guide_3%>
+                    </td>
+        </div>
+        </tr>
+        <tr>
+            <th>Shivlal Guide</th>
+            <td>4th</td>
+            <td>
+                <div id="shivlal_guide_4">All in one
+            </td>
+            <td>
+                <%=data.shivlal_guide_4%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Guide</th>
+            <td>5th</td>
+            <td>
+                <div id="shivlal_guide_5">All in one
+            </td>
+            <td>
+                <%=data.shivlal_guide_5%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Guide</th>
+            <td>6th</td>
+            <td>
+                <div id="shivlal_guide_6">All in one
+            </td>
+            <td>
+                <%=data.shivlal_guide_6%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Guide</th>
+            <td>7th</td>
+            <td>
+                <div id="shivlal_guide_7">All in one
+            </td>
+            <td>
+                <%=data.shivlal_guide_7%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Guide</th>
+            <td>8th</td>
+            <td>
+                <div id="shivlal_guide_8">All in one
+            </td>
+            <td>
+                <%=data.shivlal_guide_8%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Guide</th>
+            <td>9th</td>
+            <td>
+                <div id="shivlal_guide_9">All in one
+            </td>
+            <td>
+                <%=data.shivlal_guide_9%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Shivlal Guide</th>
+            <td>10th</td>
+            <td>
+                <div id="shivlal_guide_10">All in one
+            </td>
+            <td>
+                <%=data.shivlal_guide_10%>
+            </td>
+            </div>
+        </tr>
+        </table>
+        </div>
+        <div id="six" class="column">
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <th>Keshav Guide</th>
+                    <td>3rd</td>
+                    <td>
+                        <div id="keshav_guide_3">All in one
+                    </td>
+                    <td>
+                        <%=data.keshav_guide_3%>
+                    </td>
+        </div>
+        </tr>
+        <tr>
+            <th>Keshav Guide</th>
+            <td>4th</td>
+            <td>
+                <div id="keshav_guide_4">All in one
+            </td>
+            <td>
+                <%=data.keshav_guide_4%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Guide</th>
+            <td>5th</td>
+            <td>
+                <div id="keshav_guide_5">All in one
+            </td>
+            <td>
+                <%=data.keshav_guide_5%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Guide</th>
+            <td>6th</td>
+            <td>
+                <div id="keshav_guide_6">All in one
+            </td>
+            <td>
+                <%=data.keshav_guide_6%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Guide</th>
+            <td>7th</td>
+            <td>
+                <div id="keshav_guide_7">All in one
+            </td>
+            <td>
+                <%=data.keshav_guide_7%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Guide</th>
+            <td>8th</td>
+            <td>
+                <div id="keshav_guide_8">All in one
+            </td>
+            <td>
+                <%=data.keshav_guide_8%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Guide</th>
+            <td>9th</td>
+            <td>
+                <div id="keshav_guide_9">All in one
+            </td>
+            <td>
+                <%=data.keshav_guide_9%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Guide</th>
+            <td>10th</td>
+            <td>
+                <div id="keshav_guide_10">All in one
+            </td>
+            <td>
+                <%=data.keshav_guide_10%>
+            </td>
+            </div>
+        </tr>
+        </table>
+        </div>
+        <div class="column" style="float : left">
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <th>Maa Narmada Project</th>
+                    <td>9th</td>
+                    <td>
+                        <div id="mn_project_9_eng">English
+                    </td>
+                    <td>
+                        <%=data.mn_project_9_eng%>
+                    </td>
+        </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>9th</td>
+            <td>
+                <div id="mn_project_9_hin">Hindi
+            </td>
+            <td>
+                <%=data.mn_project_9_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>9th</td>
+            <td>
+                <div id="mn_project_9_maths">Maths
+            </td>
+            <td>
+                <%=data.mn_project_9_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>9th</td>
+            <td>
+                <div id="mn_project_9_sc">Science
+            </td>
+            <td>
+                <%=data.mn_project_9_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>9th</td>
+            <td>
+                <div id="mn_project_9_sst">Social Studies
+            </td>
+            <td>
+                <%=data.mn_project_9_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>9th</td>
+            <td>
+                <div id="mn_project_9_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.mn_project_9_skt%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>10th</td>
+            <td>
+                <div id="mn_project_10_eng">English
+            </td>
+            <td>
+                <%=data.mn_project_10_eng%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>10th</td>
+            <td>
+                <div id="mn_project_10_hin">Hindi
+            </td>
+            <td>
+                <%=data.mn_project_10_hin%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>10th</td>
+            <td>
+                <div id="mn_project_10_maths">Maths
+            </td>
+            <td>
+                <%=data.mn_project_10_maths%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>10th</td>
+            <td>
+                <div id="mn_project_10_sc">Science
+            </td>
+            <td>
+                <%=data.mn_project_10_sc%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>10th</td>
+            <td>
+                <div id="mn_project_10_sst">Social Studies
+            </td>
+            <td>
+                <%=data.mn_project_10_sst%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Maa Narmada Project</th>
+            <td>10th</td>
+            <td>
+                <div id="mn_project_10_skt">Sanskrit
+            </td>
+            <td>
+                <%=data.mn_project_10_skt%>
+            </td>
+            </div>
+        </tr>
+        </table>
+        </div>
+        <div class="column" style="float : right;">
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <th>Keshav Practical</th>
+                    <td>9th</td>
+                    <td>
+                        <div id="navbodh_practicle_9">Science
+                    </td>
+                    <td>
+                        <%=data.navbodh_practicle_9%>
+                    </td>
+        </div>
+        </tr>
+        <tr>
+            <th>Keshav Practical</th>
+            <td>10th</td>
+            <td>
+                <div id="navbodh_practicle_10">Science
+            </td>
+            <td>
+                <%=data.navbodh_practicle_10%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Practical</th>
+            <td>11th</td>
+            <td>
+                <div id="navbodh_practicle_11_phy">Physics
+            </td>
+            <td>
+                <%=data.navbodh_practicle_11_phy%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Practical</th>
+            <td>11th</td>
+            <td>
+                <div id="navbodh_practicle_11_chem">Chemistry
+            </td>
+            <td>
+                <%=data.navbodh_practicle_11_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Practical</th>
+            <td>11th</td>
+            <td>
+                <div id="navbodh_practicle_11_bio">Biology
+            </td>
+            <td>
+                <%=data.navbodh_practicle_11_bio%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Practical</th>
+            <td>12th</td>
+            <td>
+                <div id="navbodh_practicle_12_phy">Physics
+            </td>
+            <td>
+                <%=data.navbodh_practicle_12_phy%>
+            </td>
+            </div>
+        </tr>
+
+
+        <tr>
+            <th>Keshav Practical</th>
+            <td>12th</td>
+            <td>
+                <div id="navbodh_practicle_12_chem">Chemistry
+            </td>
+            <td>
+                <%=data.navbodh_practicle_12_chem%>
+            </td>
+            </div>
+        </tr>
+        <tr>
+            <th>Keshav Practical</th>
+            <td>12th</td>
+            <td>
+                <div id="navbodh_practicle_12_bio">Biology
+            </td>
+            <td>
+                <%=data.navbodh_practicle_12_bio%>
+            </td>
+            </div>
+        </tr>
+        </table>
+        </div>
+
+        </div>
+        
+
+
+
+        <%})%>
+
+
+            <!--  
     if ('<%=data.pa_11_eng%>' === "0") {
         document.getElementById('pa_11_eng').style.display = "none"
     }
@@ -618,10 +2368,613 @@
         }
     
 
---> 
+-->
+            <script>
+
+
+            </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      height : 80%;
+      position : relative;
+      
+  border-spacing: 0;
+    }
+    .column{
+        width : 90%;
+        
+    }
+    
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    @media screen and (min-width : 750px) {
+        .column{
+        width : 50%;
+        
+    }
+    .right{
+        float : right;
+        top : 0
+    }
+    .left{
+        float : left;
+    }
+    
+    
+    }
+
+    .row{
+        height: 80%;
+    }
+    #info{
+        font-size: 19px;
+        font-weight: bold;
+        margin: 10px;
+    }
+    #one,#two,#three,#four,#five,#six,#seven{
+        float: none;
+    }
+    #all{
+        overflow-y: auto;
+        height : 630px;
+    }
+    
+    
+    </style>
+</head>
+
+<body>
+
+<%data.forEach(data=>{%>
+    <div class="row" style="overflow-y: auto;">
+        <div id="info">
+            Name : <%=data.name%><br>
+            City : <%=data.city%><br>
+            Phone : <a href="tel:+91<%=data.phone%>">+91<%=data.phone%></a><br>
+            Order ID : <%=data._id%>
+            <%=length%>
+        </div>
+        <div id="all">
+            <div class="column">
+                <table id="one">
+                    
+                    
+                    <div class="column left">
+                        <table >
+                            
+                            
+                            <tr><th>Item</th><th>Class</th><th>Subject</th>
+                    <th>Quantity</th></tr>
+                        <tr><th>PA</th><td>9th</td><td><div id="pa_9_eng">English</td><td><%=data.pa_9_eng%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>9th</td><td><div id="pa_9_hin">Hindi</td><td><%=data.pa_9_hin%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>9th</td><td><div id="pa_9_maths">Maths</td><td><%=data.pa_9_maths%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>9th</td><td><div id="pa_9_sc">Science</td><td><%=data.pa_9_sc%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>9th</td><td><div id="pa_9_sst">Social Studies</td><td><%=data.pa_9_sst%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>9th</td><td><div id="pa_9_skt">Sanskrit</td><td><%=data.pa_9_skt%></td>
+                        </div></tr>
+                        
+                        
+                        <tr><th>PA</th><td>10th</td><td><div id="pa_10_eng">English</td><td><%=data.pa_10_eng%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>10th</td><td><div id="pa_10_hin">Hindi</td><td><%=data.pa_10_hin%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>10th</td><td><div id="pa_10_maths">Maths</td><td><%=data.pa_10_maths%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>10th</td><td><div id="pa_10_sc">Science</td><td><%=data.pa_10_sc%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>10th</td><td><div id="pa_10_sst">Social Studies</td><td><%=data.pa_10_sst%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>10th</td><td><div id="pa_10_skt">Sanskrit</td><td><%=data.pa_10_skt%></td>
+                        </div></tr>
+                        
+                        
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_eng">English</td><td><%=data.pa_11_eng%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_hin">Hindi</td><td><%=data.pa_11_hin%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_phy">Physics</td><td><%=data.pa_11_phy%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_chem">Chemistry</td><td><%=data.pa_11_chem%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_bio">Biology</td><td><%=data.pa_11_bio%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_his">History</td><td><%=data.pa_11_his%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_ps">Political Science</td><td><%=data.pa_11_ps%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_eco">Economics</td><td><%=data.pa_11_eco%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_socio">Sociology</td><td><%=data.pa_11_socio%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_geo">Geography</td><td><%=data.pa_11_geo%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_krashi">Krashi Ganit</td><td><%=data.pa_11_krashi%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_pashu">Pashu Palan</td><td><%=data.pa_11_pashu%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>11th</td><td><div id="pa_11_fasal">Fasal Utpadan</td><td><%=data.pa_11_fasal%></td>
+                        </div></tr>
+                        
+                        
+                        
+                        
+                           
+                        
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_eng">English</td><td><%=data.pa_12_eng%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_hin">Hindi</td><td><%=data.pa_12_hin%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_phy">Physics</td><td><%=data.pa_12_phy%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_chem">Chemistry</td><td><%=data.pa_12_chem%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_bio">Biology</td><td><%=data.pa_12_bio%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_his">History</td><td><%=data.pa_12_his%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_ps">Political Science</td><td><%=data.pa_12_ps%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_eco">Economics</td><td><%=data.pa_12_eco%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_socio">Sociology</td><td><%=data.pa_12_socio%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_geo">Geography</td><td><%=data.pa_12_geo%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_krashi">Krashi Ganit</td><td><%=data.pa_12_krashi%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_pashu">Pashu Palan</td><td><%=data.pa_12_pashu%></td>
+                        </div></tr>
+                        <tr><th>PA</th><td>12th</td><td><div id="pa_12_fasal">Fasal Utpadan</td><td><%=data.pa_12_fasal%></td>
+                        </div></tr>
+                    </table>
+                    </div>
+                    <div class="column right">
+                        <table>
+                            <tr><th>Item</th><th>Class</th><th>Subject</th>
+                                <th>Quantity</th></tr>
+                        <tr><th>PB</th><td>9th</td><td><div id="pb_9_eng">English</td><td><%=data.pb_9_eng%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>9th</td><td><div id="pb_9_hin">Hindi</td><td><%=data.pb_9_hin%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>9th</td><td><div id="pb_9_maths">Maths</td><td><%=data.pb_9_maths%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>9th</td><td><div id="pb_9_sc">Science</td><td><%=data.pb_9_sc%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>9th</td><td><div id="pb_9_sst">Social Studies</td><td><%=data.pb_9_sst%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>9th</td><td><div id="pb_9_skt">Sanskrit</td><td><%=data.pb_9_skt%></td>
+                        </div></tr>
+                        
+                        
+                        <tr><th>PB</th><td>10th</td><td><div id="pb_10_eng">English</td><td><%=data.pb_10_eng%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>10th</td><td><div id="pb_10_hin">Hindi</td><td><%=data.pb_10_hin%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>10th</td><td><div id="pb_10_maths">Maths</td><td><%=data.pb_10_maths%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>10th</td><td><div id="pb_10_sc">Science</td><td><%=data.pb_10_sc%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>10th</td><td><div id="pb_10_sst">Social Studies</td><td><%=data.pb_10_sst%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>10th</td><td><div id="pb_10_skt">Sanskrit</td><td><%=data.pb_10_skt%></td>
+                        </div></tr>
+                        
+                        
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_eng">English</td><td><%=data.pb_11_eng%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_hin">Hindi</td><td><%=data.pb_11_hin%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_phy">Physics</td><td><%=data.pb_11_phy%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_chem">Chemistry</td><td><%=data.pb_11_chem%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_bio">Biology</td><td><%=data.pb_11_bio%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_his">History</td><td><%=data.pb_11_his%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_ps">Political Science</td><td><%=data.pb_11_ps%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_eco">Economics</td><td><%=data.pb_11_eco%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_socio">Sociology</td><td><%=data.pb_11_socio%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_geo">Geography</td><td><%=data.pb_11_geo%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_krashi">Krashi Ganit</td><td><%=data.pb_11_krashi%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_pashu">Pashu Palan</td><td><%=data.pb_11_pashu%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>11th</td><td><div id="pb_11_fasal">Fasal Utpadan</td><td><%=data.pb_11_fasal%></td>
+                        </div></tr>
+                        
+                        
+                        
+                        
+                           
+                        
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_eng">English</td><td><%=data.pb_12_eng%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_hin">Hindi</td><td><%=data.pb_12_hin%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_phy">Physics</td><td><%=data.pb_12_phy%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_chem">Chemistry</td><td><%=data.pb_12_chem%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_bio">Biology</td><td><%=data.pb_12_bio%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_his">History</td><td><%=data.pb_12_his%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_ps">Political Science</td><td><%=data.pb_12_ps%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_eco">Economics</td><td><%=data.pb_12_eco%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_socio">Sociology</td><td><%=data.pb_12_socio%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_geo">Geography</td><td><%=data.pb_12_geo%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_krashi">Krashi Ganit</td><td><%=data.pb_12_krashi%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_pashu">Pashu Palan</td><td><%=data.pb_12_pashu%></td>
+                        </div></tr>
+                        <tr><th>PB</th><td>12th</td><td><div id="pb_12_fasal">Fasal Utpbdan</td><td><%=data.pb_12_fasal%></td>
+                        </div></tr>
+                    </table>
+                    </div>
+                    <div  class="column right">
+                    <table>
+                        <tr><th>Item</th><th>Class</th><th>Subject</th>
+                            <th>Quantity</th></tr>
+                        <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_eng">English</td><td><%=data.dig_9_eng%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_hin">Hindi</td><td><%=data.dig_9_hin%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_maths">Maths</td><td><%=data.dig_9_maths%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_sc">Science</td><td><%=data.dig_9_sc%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_sst">Social Studies</td><td><%=data.dig_9_sst%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>9th</td><td><div id="dig_9_skt">Sanskrit</td><td><%=data.dig_9_skt%></td>
+                        </div></tr>
+                        
+                        
+                        <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_eng">English</td><td><%=data.dig_10_eng%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_hin">Hindi</td><td><%=data.dig_10_hin%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_maths">Maths</td><td><%=data.dig_10_maths%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_sc">Science</td><td><%=data.dig_10_sc%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_sst">Social Studies</td><td><%=data.dig_10_sst%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>10th</td><td><div id="dig_10_skt">Sanskrit</td><td><%=data.dig_10_skt%></td>
+                        </div></tr>
+                        
+                        
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_eng">English</td><td><%=data.dig_11_eng%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_hin">Hindi</td><td><%=data.dig_11_hin%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_phy">Physics</td><td><%=data.dig_11_phy%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_chem">Chemistry</td><td><%=data.dig_11_chem%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_bio">Biology</td><td><%=data.dig_11_bio%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_his">History</td><td><%=data.dig_11_his%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_ps">Political Science</td><td><%=data.dig_11_ps%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_eco">Economics</td><td><%=data.dig_11_eco%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_socio">Sociology</td><td><%=data.dig_11_socio%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_geo">Geography</td><td><%=data.dig_11_geo%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_krashi">Krashi Ganit</td><td><%=data.dig_11_krashi%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_pashu">Pashu Palan</td><td><%=data.dig_11_pashu%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>11th</td><td><div id="dig_11_fasal">Fasal Utpadan</td><td><%=data.dig_11_fasal%></td>
+                        </div></tr>
+                        
+                        
+                        
+                        
+                           
+                        
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_eng">English</td><td><%=data.dig_12_eng%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_hin">Hindi</td><td><%=data.dig_12_hin%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_phy">Physics</td><td><%=data.dig_12_phy%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_chem">Chemistry</td><td><%=data.dig_12_chem%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_bio">Biology</td><td><%=data.dig_12_bio%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_his">History</td><td><%=data.dig_12_his%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_ps">Political Science</td><td><%=data.dig_12_ps%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_eco">Economics</td><td><%=data.dig_12_eco%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_socio">Sociology</td><td><%=data.dig_12_socio%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_geo">Geography</td><td><%=data.dig_12_geo%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_krashi">Krashi Ganit</td><td><%=data.dig_12_krashi%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_pashu">Pashu Palan</td><td><%=data.dig_12_pashu%></td>
+                        </div></tr>
+                        <tr><th>Digdarshika</th><td>12th</td><td><div id="dig_12_fasal">Fasal Utdigdan</td><td><%=data.dig_12_fasal%></td>
+                        </div></tr>
+                        </table>
+                        </div>
+                
+                        <div class="column right">
+                                <table>
+                                    <tr><th>Item</th><th>Class</th><th>Subject</th>
+                                        <th>Quantity</th></tr>
+                        <tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_eng">English</td><td><%=data.shivlal_project_9_eng%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_hin">Hindi</td><td><%=data.shivlal_project_9_hin%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_maths">Maths</td><td><%=data.shivlal_project_9_maths%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_sc">Science</td><td><%=data.shivlal_project_9_sc%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_sst">Social Studies</td><td><%=data.shivlal_project_9_sst%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>9th</td><td><div id="shivlal_project_9_skt">Sanskrit</td><td><%=data.shivlal_project_9_skt%></td>
+                        </div></tr>
+                        
+                        
+                        <tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_eng">English</td><td><%=data.shivlal_project_10_eng%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_hin">Hindi</td><td><%=data.shivlal_project_10_hin%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_maths">Maths</td><td><%=data.shivlal_project_10_maths%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_sc">Science</td><td><%=data.shivlal_project_10_sc%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_sst">Social Studies</td><td><%=data.shivlal_project_10_sst%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>10th</td><td><div id="shivlal_project_10_skt">Sanskrit</td><td><%=data.shivlal_project_10_skt%></td>
+                        </div></tr>
+                        
+                        
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_eng">English</td><td><%=data.shivlal_project_11_eng%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_hin">Hindi</td><td><%=data.shivlal_project_11_hin%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_phy">Physics</td><td><%=data.shivlal_project_11_phy%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_chem">Chemistry</td><td><%=data.shivlal_project_11_chem%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_bio">Biology</td><td><%=data.shivlal_project_11_bio%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_his">History</td><td><%=data.shivlal_project_11_his%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_ps">Political Science</td><td><%=data.shivlal_project_11_ps%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_eco">Economics</td><td><%=data.shivlal_project_11_eco%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_socio">Sociology</td><td><%=data.shivlal_project_11_socio%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_geo">Geography</td><td><%=data.shivlal_project_11_geo%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_krashi">Krashi Ganit</td><td><%=data.shivlal_project_11_krashi%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_pashu">Pashu Palan</td><td><%=data.shivlal_project_11_pashu%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>11th</td><td><div id="shivlal_project_11_fasal">Fasal Utpadan</td><td><%=data.shivlal_project_11_fasal%></td>
+                        </div></tr>
+                        
+                        
+                        
+                        
+                           
+                        
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_eng">English</td><td><%=data.shivlal_project_12_eng%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_hin">Hindi</td><td><%=data.shivlal_project_12_hin%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_phy">Physics</td><td><%=data.shivlal_project_12_phy%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_chem">Chemistry</td><td><%=data.shivlal_project_12_chem%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_bio">Biology</td><td><%=data.shivlal_project_12_bio%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_his">History</td><td><%=data.shivlal_project_12_his%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_ps">Political Science</td><td><%=data.shivlal_project_12_ps%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_eco">Economics</td><td><%=data.shivlal_project_12_eco%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_socio">Sociology</td><td><%=data.shivlal_project_12_socio%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_geo">Geography</td><td><%=data.shivlal_project_12_geo%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_krashi">Krashi Ganit</td><td><%=data.shivlal_project_12_krashi%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_pashu">Pashu Palan</td><td><%=data.shivlal_project_12_pashu%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Project</th><td>12th</td><td><div id="shivlal_project_12_fasal">Fasal Utpadan</td><td><%=data.shivlal_project_12_fasal%></td>
+                        </div></tr>
+                        </table>
+                        </div>
+                        <div  class="column left">
+                            <table>
+                                <tr><th>Item</th><th>Class</th><th>Subject</th>
+                                    <th>Quantity</th></tr>
+                        <tr><th>Shivlal Guide</th><td>3rd</td><td><div id="shivlal_guide_3">All in one</td><td><%=data.shivlal_guide_3%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Guide</th><td>4th</td><td><div id="shivlal_guide_4">All in one</td><td><%=data.shivlal_guide_4%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Guide</th><td>5th</td><td><div id="shivlal_guide_5">All in one</td><td><%=data.shivlal_guide_5%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Guide</th><td>6th</td><td><div id="shivlal_guide_6">All in one</td><td><%=data.shivlal_guide_6%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Guide</th><td>7th</td><td><div id="shivlal_guide_7">All in one</td><td><%=data.shivlal_guide_7%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Guide</th><td>8th</td><td><div id="shivlal_guide_8">All in one</td><td><%=data.shivlal_guide_8%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Guide</th><td>9th</td><td><div id="shivlal_guide_9">All in one</td><td><%=data.shivlal_guide_9%></td>
+                        </div></tr>
+                        <tr><th>Shivlal Guide</th><td>10th</td><td><div id="shivlal_guide_10">All in one</td><td><%=data.shivlal_guide_10%></td>
+                        </div></tr>
+                        </table>
+                        </div>
+                        <div  class="column right">
+                            <table>
+                                <tr><th>Item</th><th>Class</th><th>Subject</th>
+                                    <th>Quantity</th></tr>
+                        <tr><th>Keshav Guide</th><td>3rd</td><td><div id="keshav_guide_3">All in one</td><td><%=data.keshav_guide_3%></td>
+                        </div></tr>
+                        <tr><th>Keshav Guide</th><td>4th</td><td><div id="keshav_guide_4">All in one</td><td><%=data.keshav_guide_4%></td>
+                        </div></tr>
+                        <tr><th>Keshav Guide</th><td>5th</td><td><div id="keshav_guide_5">All in one</td><td><%=data.keshav_guide_5%></td>
+                        </div></tr>
+                        <tr><th>Keshav Guide</th><td>6th</td><td><div id="keshav_guide_6">All in one</td><td><%=data.keshav_guide_6%></td>
+                        </div></tr>
+                        <tr><th>Keshav Guide</th><td>7th</td><td><div id="keshav_guide_7">All in one</td><td><%=data.keshav_guide_7%></td>
+                        </div></tr>
+                        <tr><th>Keshav Guide</th><td>8th</td><td><div id="keshav_guide_8">All in one</td><td><%=data.keshav_guide_8%></td>
+                        </div></tr>
+                        <tr><th>Keshav Guide</th><td>9th</td><td><div id="keshav_guide_9">All in one</td><td><%=data.keshav_guide_9%></td>
+                        </div></tr>
+                        <tr><th>Keshav Guide</th><td>10th</td><td><div id="keshav_guide_10">All in one</td><td><%=data.keshav_guide_10%></td>
+                        </div></tr>
+                        </table>
+                        </div>
+                        <div class="column left" ><table>
+                            <tr><th>Item</th><th>Class</th><th>Subject</th>
+                                    <th>Quantity</th></tr>
+                            <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_eng">English</td><td><%=data.mn_project_9_eng%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_hin">Hindi</td><td><%=data.mn_project_9_hin%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_maths">Maths</td><td><%=data.mn_project_9_maths%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_sc">Science</td><td><%=data.mn_project_9_sc%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_sst">Social Studies</td><td><%=data.mn_project_9_sst%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>9th</td><td><div id="mn_project_9_skt">Sanskrit</td><td><%=data.mn_project_9_skt%></td>
+                            </div></tr>
+                            
+                            
+                            <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_eng">English</td><td><%=data.mn_project_10_eng%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_hin">Hindi</td><td><%=data.mn_project_10_hin%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_maths">Maths</td><td><%=data.mn_project_10_maths%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_sc">Science</td><td><%=data.mn_project_10_sc%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_sst">Social Studies</td><td><%=data.mn_project_10_sst%></td>
+                            </div></tr>
+                            <tr><th>Maa Narmada Project</th><td>10th</td><td><div id="mn_project_10_skt">Sanskrit</td><td><%=data.mn_project_10_skt%></td>
+                            </div></tr>
+                            </table>
+                            </div>
+                            <div class="column right"><table>
+                                <tr><th>Item</th><th>Class</th><th>Subject</th>
+                                        <th>Quantity</th></tr>
+                                <tr><th>Keshav Practical</th><td>9th</td><td><div id="navbodh_practicle_9">Science</td><td><%=data.navbodh_practicle_9%></td>
+                                </div></tr>
+                                <tr><th>Keshav Practical</th><td>10th</td><td><div id="navbodh_practicle_10">Science</td><td><%=data.navbodh_practicle_10%></td>
+                                </div></tr>
+                                <tr><th>Keshav Practical</th><td>11th</td><td><div id="navbodh_practicle_11_phy">Physics</td><td><%=data.navbodh_practicle_11_phy%></td>
+                                </div></tr>
+                                <tr><th>Keshav Practical</th><td>11th</td><td><div id="navbodh_practicle_11_chem">Chemistry</td><td><%=data.navbodh_practicle_11_chem%></td>
+                                </div></tr>
+                                <tr><th>Keshav Practical</th><td>11th</td><td><div id="navbodh_practicle_11_bio">Biology</td><td><%=data.navbodh_practicle_11_bio%></td>
+                                </div></tr>
+                                <tr><th>Keshav Practical</th><td>12th</td><td><div id="navbodh_practicle_12_phy">Physics</td><td><%=data.navbodh_practicle_12_phy%></td>
+                                </div></tr>
+                                
+                                
+                                <tr><th>Keshav Practical</th><td>12th</td><td><div id="navbodh_practicle_12_chem">Chemistry</td><td><%=data.navbodh_practicle_12_chem%></td>
+                                </div></tr>
+                                <tr><th>Keshav Practical</th><td>12th</td><td><div id="navbodh_practicle_12_bio">Biology</td><td><%=data.navbodh_practicle_12_bio%></td>
+                                </div></tr>
+                                </table>
+                                </div>
+        </div>
+</div>
+<form action="/delete_<%=data._id%>">
+    <input type="hidden" name="id" value="<%=data._id%>">
+    <input type="hidden" name="name" value="<%=data.name%>">
+    <input type="hidden" name="phone" value="<%=data.phone%>">
+    <input type="hidden" name="city" value="<%=data.city%>">
+    <button type="submit"><i class="fa-solid fa-trash"></i></button>
+</form>    
+
+
+
+<%})%>
+
 <script>
-
-
+    
 </script>
 </body>
 </html>
+-->

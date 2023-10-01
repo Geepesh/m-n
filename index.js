@@ -1,22 +1,16 @@
 
 const express = require('express')
 const app = express()
-const port = 3000 || process.env.PORT;
+const port = 8000
 const bp = require('body-parser')
 const mongoose = require('mongoose')
 const DATA = require("./db/db")
-require('dotenv').config()
+require('dotenv')
 app.use(bp.urlencoded({
     extended : false
 }))
-mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://geepesh_agrawal:geepeshagrawal@cluster0.n8viw.mongodb.net/order-form?retryWrites=true&w=majority", {
 
-    useUnifiedTopology: true,
-
-    useNewUrlParser: true,
-
-}).then(()=>{
+mongoose.connect("mongodb+srv://geepesh_agrawal:geepeshagrawal@cluster0.n8viw.mongodb.net/order-form?retryWrites=true&w=majority").then(()=>{
   console.log('connected')
 })
 
@@ -43,9 +37,10 @@ app.post('/admin',(req,res)=>{
 
   DATA.find({}).then(data=>{
     if(Object.keys(data).length > 0){
-      if(req.body.pass === process.env.PASS){
+      if(req.body.pass === "pass"){
     res.render('admin',{
-      data : data
+      data : data,
+      length : Object.keys(data).length
     })
   }else{
     res.send('wrong pass')
